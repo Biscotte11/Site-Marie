@@ -1,0 +1,33 @@
+.home--img-cinq {
+position: absolute;
+width: 428px;
+height: 386px;
+left: 10px;
+top: 235px;
+}
+
+.home--img-six {
+position: absolute;
+width: 392px;
+height: 418px;
+left: 487px;
+top: 308px;
+}
+
+.home--img-sept {
+position: absolute;
+width: 456px;
+height: 275px;
+left: 916px;
+top: 210px;
+object-fit: cover;
+}
+
+.home--img-huit {
+position: absolute;
+width: 496px;
+height: 239px;
+left: 944px;
+top: 536px;
+
+}

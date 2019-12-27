@@ -1,0 +1,88 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+#accueil--div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #D6D6D6;
+}
+
+.home--img-cinq {
+width: 458px;
+height: 386px;
+object-fit: cover;
+padding-top: 10px;
+}
+
+.home--img-six {
+width: 452px;
+height: 418px;
+object-fit: cover;
+object-position: right;
+padding-top: 10px;
+border-radius: 50%;
+}
+
+.home--img-sept {
+width: 456px;
+height: 275px;
+object-fit: cover;
+margin-bottom: 10px;
+}
+
+.home--img-huit {
+width: 496px;
+height: 239px;
+object-fit: cover;
+margin-top: 25px;
+}
+
+.title--parasite {
+position: absolute;
+width: 272px;
+height: 43px;
+left: 114px;
+top: 72px;
+color: black;
+}
+
+.title--pop {
+position: absolute;
+width: 272px;
+height: 43px;
+left: 904px;
+top: 267px;
+color: white;
+}
+
+.title--meigmata {
+position: absolute;
+width: 272px;
+height: 43px;
+left: 375px;
+top: 604px;
+color: white;
+}
+
+.title--frere {
+position: absolute;
+width: 272px;
+height: 43px;
+left: 887px;
+top: 643px;
+color: white;
+}
+
+.user {
+  margin-right: 20px;
+}
+
+.fa-home {
+  margin-left: 20px;
+}

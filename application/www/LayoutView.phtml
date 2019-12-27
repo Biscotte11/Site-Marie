@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Site Marie Mercier</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Librairie jQuery -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+</head>
+<body>
+
+<!-- En-tête commune -->
+<header>
+
+<!-- Interface utilisateur -->
+<nav class="nav-bar">
+    <div class="nav-list1">
+        <a class="" href="<?= $requestUrl ?>/accueil"><i class="fas fa-home"></i></a>
+    </div>
+
+
+      <div>
+        <i class="fas fa-user user"></i>
+    <?php if (array_key_exists('user', $_SESSION)){ ?>
+
+        <a class="" href="<?= $requestUrl ?>/user/profil">Mon Profil</a>
+
+        <?php if($_SESSION['user']['role'] == 'admin') {?>
+
+        <a class="" href="<?= $requestUrl ?>/admin">Admin</a>
+
+      <?php } ?>
+
+        <a class="" href="<?= $requestUrl ?>/user/logout">Déconnexion</a>
+
+       <?php } else {?>
+         <div class="nav--hide">
+
+        <a class="" href="<?= $requestUrl ?>/user/login">Connexion</a>
+        <a class="" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
+       </div>
+    <?php } ?>
+
+        </div>
+
+</nav>
+
+</header>
+<main>
+
+    <!-- Affichage du template lié à la vue -->
+    <?php include $this->viewData['template'] ?>
+</main>
+
+<!-- Pied de page commun -->
+<footer>
+    <small>copyright Marie Mercier</small>
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+</html>

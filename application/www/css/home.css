@@ -1,0 +1,67 @@
+*{
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.home--main{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.home--img-un {
+  width: 1426px;
+  height: 401px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  padding-bottom: 15px;
+}
+
+.home--img-deux {
+  position: absolute;
+  width: 418px;
+  height: 487px;
+  left: 0px;
+  top: 413px;
+}
+
+.home--img-trois {
+position: absolute;
+width: 695px;
+height: 487px;
+left: 429px;
+top: 413px;
+}
+
+.home--img-quatre {
+position: absolute;
+width: 292px;
+height: 487px;
+left: 1134px;
+top: 413px;
+}
+
+.home--title {
+position: absolute;
+left: 931px;
+top: 286px;
+width: 415px;
+height: 61px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 56px;
+line-height: 66px;
+color: #FFF9F9;
+z-index: 3;
+}
