@@ -3,6 +3,11 @@ img {
   height: auto;
 }
 
+body {
+  background-color: #D6D6D6;
+  font-family: 'Roboto Mono', monospace;
+}
+
 #accueil--div {
   width: 100%;
   margin-left: auto;
@@ -10,7 +15,6 @@ img {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #D6D6D6;
 }
 
 .home--img-cinq {
@@ -45,38 +49,43 @@ margin-top: 25px;
 
 .title--parasite {
 position: absolute;
-width: 272px;
+width: 292px;
 height: 43px;
-left: 114px;
+left: 202px;
 top: 72px;
 color: black;
+font-family: 'Roboto Mono', monospace;
 }
 
 .title--pop {
 position: absolute;
 width: 272px;
 height: 43px;
-left: 904px;
+left: 975px;
 top: 267px;
 color: white;
+font-family: 'Roboto Mono', monospace;
 }
 
 .title--meigmata {
+font-family: 'Roboto Mono', monospace;
 position: absolute;
 width: 272px;
 height: 43px;
-left: 375px;
+left: 464px;
 top: 604px;
 color: white;
 }
 
 .title--frere {
+font-family: 'Roboto Mono', monospace;
 position: absolute;
-width: 272px;
+width: 277px;
 height: 43px;
-left: 887px;
+left: 953px;
 top: 643px;
 color: white;
+text-align: center;
 }
 
 .user {

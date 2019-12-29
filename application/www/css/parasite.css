@@ -1,0 +1,83 @@
+body {
+  background-color: white;
+}
+
+img {
+  width: 425px;
+  height: 246px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title--img {
+clear: both;
+object-fit: contain;
+object-position: center;
+width: 500px;
+}
+
+.img-neuf {
+  width: 680px;
+  height: 291px;
+  /*float: left;*/
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 0px 10px 10px 10px;
+  padding-left: 10px;
+}
+
+.groupe--img {
+  width: 500px;
+}
+
+.p--parasite {
+  float: right;
+  width: 57%;
+  font-size: 19px;
+  padding: 10px 10px;
+  margin: 0;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.div--parasite {
+  width : 100%;
+  margin-bottom: 30px;
+  margin-top: 12px;
+}
+
+.header--slider {
+  clear: both;
+  height: 250px;
+}
+
+.five {
+  object-fit: cover;
+  object-position: top;
+}
+
+.prec {
+  font-size: 22px;
+  padding: 2px 15px;
+  left: 107px;
+  top: 653px;
+  position: absolute;
+  z-index: 2;
+  background-color: lightgrey;
+  border: none;
+}
+
+.next {
+  font-size: 22px;
+  padding: 2px 15px;
+  z-index: 2;
+  left: 1289px;
+  top: 871px;
+  position: absolute;
+  background-color: lightgrey;
+  border: none;
+}
+
+footer {
+  clear: both;
+}
