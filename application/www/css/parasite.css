@@ -32,7 +32,7 @@ width: 500px;
 
 .p--parasite {
   float: right;
-  width: 57%;
+  width: 63%;
   font-size: 19px;
   padding: 10px 10px;
   margin: 0;
@@ -59,8 +59,8 @@ width: 500px;
 .prec {
   font-size: 22px;
   padding: 2px 15px;
-  left: 107px;
-  top: 653px;
+  left: 124px;
+  top: 654px;
   position: absolute;
   z-index: 2;
   background-color: lightgrey;
@@ -71,8 +71,8 @@ width: 500px;
   font-size: 22px;
   padding: 2px 15px;
   z-index: 2;
-  left: 1289px;
-  top: 871px;
+  left: 1445px;
+  top: 872px;
   position: absolute;
   background-color: lightgrey;
   border: none;

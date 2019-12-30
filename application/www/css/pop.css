@@ -1,12 +1,12 @@
 img {
-  width: 401px;
+  width: 466px;
   height: 246px;
   object-fit: cover;
   object-position: center;
 }
 
 .title--pop {
-  width: 825px;
+  width: 930px;
   height: 250px;
   object-fit: cover;
   float: right;
@@ -45,8 +45,8 @@ img {
 .prec {
   font-size: 22px;
   padding: 2px 15px;
-  left: 107px;
-  top: 677px;
+  left: 124px;
+  top: 655px;
   position: absolute;
   z-index: 2;
   background-color: lightgrey;
@@ -57,8 +57,8 @@ img {
   font-size: 22px;
   padding: 2px 15px;
   z-index: 2;
-  left: 1277px;
-  top: 894px;;
+  left: 1486px;
+  top: 872px;
   position: absolute;
   background-color: lightgrey;
   border: none;
