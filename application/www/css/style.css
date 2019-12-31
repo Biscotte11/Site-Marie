@@ -20,6 +20,17 @@ header {
   padding: 18px;
 }
 
+.nav-bar--deux{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.nav--list>a {
+	display: block;
+	width: 100%;
+}
+
 .bar--deux {
   color: white;
   padding: 0px 18px;
@@ -29,6 +40,10 @@ header {
 .fa-home, .user {
   font-size: 30px;
   color: white;
+}
+
+.hide {
+	display: none;
 }
 
 .user {
