@@ -1,12 +1,12 @@
 img {
-    width: 401px;
+    width: 466px;
     height: 246px;
     object-fit: cover;
     object-position: center;
 }
 
 .title--M{
-  width: 340px;
+  width: 460px;
   height: 250px;
   object-fit: cover;
   object-position: center;
@@ -24,12 +24,12 @@ img {
   font-family: 'Roboto Mono', monospace;
   text-align: center;
   line-height: 1.5;
-  font-size: 36px;
+  font-size: 42px;
 }
 
 .img--meigmata{
   /*float: right;*/
-  width: 400px;
+  width: 460px;
   height: 250px;
   object-fit: cover;
   object-position: center;
@@ -50,7 +50,7 @@ img {
 
 .essai {
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   margin-top: 20px;
   z-index: 3;
@@ -58,7 +58,7 @@ img {
 
 .header--slider {
   margin-bottom: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .video {

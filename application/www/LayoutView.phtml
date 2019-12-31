@@ -38,28 +38,41 @@
 
 
       <div class="nav-bar--deux">
+<<<<<<< HEAD
         
+=======
+        <a><i class="fas fa-calendar-minus bar--deux"></i></a>
+        <a href="https://www.facebook.com/parasitesanss/"><i class="fas fa-link bar--deux"></i></a>
+        <a><i class="fas fa-shopping-basket bar--deux"></i></a>
+
+        <div id="user--connect">
+>>>>>>> a0b29d797099ba12b2df94e96bb48ed0999445e3
         <i class="fas fa-user user bar--deux"></i>
-    <?php if (array_key_exists('user', $_SESSION)){ ?>
+          <div class="under-nav-list hide">
 
-        <a class="" href="<?= $requestUrl ?>/user/profil">Mon Profil</a>
+            <?php if (array_key_exists('user', $_SESSION)){ ?>
 
-        <?php if($_SESSION['user']['role'] == 'admin') {?>
+              <a href="<?= $requestUrl ?>/user/profil">Mon Profil</a>
 
-        <a class="" href="<?= $requestUrl ?>/admin">Admin</a>
+              <?php if($_SESSION['user']['role'] == 'admin') {?>
 
-      <?php } ?>
+                <a class="" href="<?= $requestUrl ?>/admin">Admin</a>
 
-        <a class="" href="<?= $requestUrl ?>/user/logout">Déconnexion</a>
+              <?php } ?>
 
-       <?php } else {?>
-         <div class="nav--hide">
+              <a class="" href="<?= $requestUrl ?>/user/logout">Déconnexion</a>
 
-        <a class="" href="<?= $requestUrl ?>/user/login">Connexion</a>
-        <a class="" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
-       </div>
-    <?php } ?>
+            <?php } else {?>
+         <div id="opa" class="nav--hide position">
 
+           <a class="" href="<?= $requestUrl ?>/user/login">Connexion</a>
+           <a class="" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
+         </div>
+
+         </div>
+       <?php } ?>
+
+     </div>
         </div>
 
 </nav>

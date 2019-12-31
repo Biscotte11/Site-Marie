@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/accueil.css">
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/login.css">
+
+<div>
+  <img class="title--M" src="<?= $wwwUrl ?>/images/musique/15.jpg" alt="photo">
+</div>
+
+<div class="register">
+	<h3 class="title--register">Enregistrez vous</h3>
+	<form class="b-form" action="<?=$requestUrl?>/user/register" method="POST">
+    <label for="nomgroupe">Nom du Groupe</label>
+       <select id="nomgroupe" name="nomgroupe">
+         <?php foreach ($groupes as $groupe) { ?>
+           <option value="<?= $groupe['groupeid'] ?>"><?= $groupe['nomgroupe'] ?></option>
+         <?php } ?>
+      </select>
+    <input type="text" name="firstname" placeholder="Prénom">
+		<input type="text" name="lastname" placeholder="Nom">
+		<input type="text" name="email" placeholder="Email">
+		<input type="text" name="password" placeholder="Mot de passe">
+		<input class="button-register" type="submit" value="Enregister">
+	</form>
+</div>

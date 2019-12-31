@@ -5,6 +5,8 @@
 img {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: top;
 }
 
 .home--main{
@@ -21,7 +23,7 @@ img {
 }
 
 .home--img-un {
-  width: 1440px;
+  width: 1680px;
   height: 401px;
   object-fit: cover;
   object-position: center;
@@ -30,27 +32,30 @@ img {
 }
 
 .home--img-deux {
-  position: absolute;
-  width: 418px;
+  width: 450px;
   height: 487px;
-  left: 0px;
-  top: 413px;
+  /* left: 0px;
+  top: 413px; */
 }
 
 .home--img-trois {
-position: absolute;
-width: 695px;
+width: 765px;
 height: 487px;
-left: 429px;
-top: 413px;
+/* left: 429px;
+top: 413px; */
 }
 
 .home--img-quatre {
-position: absolute;
-width: 306px;
+width: 450px;
 height: 487px;
-left: 1134px;
-top: 413px;
+/* left: 1134px;
+top: 413px; */
+}
+
+.home--container {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .home--title {

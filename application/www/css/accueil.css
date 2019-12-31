@@ -1,6 +1,7 @@
 img {
   width: 100%;
   height: auto;
+  margin: 20px;
 }
 
 body {
@@ -13,8 +14,32 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: inline-flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#user--connect {
+  display: inline-block;
+}
+
+.position {
+  position: absolute;
+  left: 1453px;
+  top: 70px;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.position>a:hover {
+	color: #136267;
+}
+
+.position>a {
+  color: black;
+  text-decoration: none;
+  display: inline-flex;
+  width: 100%;
 }
 
 .home--img-cinq {
@@ -51,8 +76,8 @@ margin-top: 25px;
 position: absolute;
 width: 292px;
 height: 43px;
-left: 202px;
-top: 72px;
+left: 266px;
+top: 81px;
 color: black;
 font-family: 'Roboto Mono', monospace;
 }
@@ -61,8 +86,8 @@ font-family: 'Roboto Mono', monospace;
 position: absolute;
 width: 272px;
 height: 43px;
-left: 975px;
-top: 267px;
+left: 1136px;
+top: 270px;
 color: white;
 font-family: 'Roboto Mono', monospace;
 }
@@ -72,24 +97,28 @@ font-family: 'Roboto Mono', monospace;
 position: absolute;
 width: 272px;
 height: 43px;
-left: 464px;
-top: 604px;
+left: 253px;
+top: 669px;
 color: white;
 }
 
 .title--frere {
 font-family: 'Roboto Mono', monospace;
 position: absolute;
-width: 277px;
-height: 43px;
-left: 953px;
-top: 643px;
+width: 410px;
+height: 35px;
+left: 1040px;
+top: 656px;
 color: white;
 text-align: center;
 }
 
 .user {
   margin-right: 20px;
+}
+
+.hide {
+	display: none;
 }
 
 .fa-home {

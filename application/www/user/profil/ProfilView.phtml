@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+
+<div>
+  <h3>Mon profil</h3>
+
+  <form action="<?=$requestUrl ?>/user/profil" method="POST">
+    <input type="text" name="firstname" placeholder="Prénom" value="<?=$user['firstname']?>">
+    <input type="text" name="lastname" placeholder="Nom" value="<?=$user['lastname']?>">
+    <input type="text" name="email" placeholder="Email" value="<?=$user['email']?>">
+
+    <select name="nomgroupe" placeholder="Nom du groupe">
+         <?php foreach ($groupes as $groupe) { ?>
+           <?php if($user['groupe_id'] === $groupe['groupeid']) {?>
+             <option selected value="<?= $groupe['groupeid'] ?>"><?= $groupe['nomgroupe'] ?></option>
+           <?php }else {?>
+             <option value="<?= $groupe['groupeid'] ?>"><?= $groupe['nomgroupe'] ?></option>
+           <?php }?>
+         <?php } ?>
+    </select>
+
+    <input type="submit" value="Modifier">
+  </form>
+
+</div>
