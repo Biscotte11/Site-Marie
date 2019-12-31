@@ -4,21 +4,29 @@ class ProfilController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
-    	/*
-    	 * Méthode appelée en cas de requête HTTP GET
-    	 *
-    	 * L'argument $http est un objet permettant de faire des redirections etc.
-    	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
-    	 */
+      $userModel = new UserModel();
+      $user = $userModel->getOneUser($_SESSION['user']['Id']);
+
+      $userModel = new UserModel();
+      $groupes = $userModel->nomGroupe();
+
+      return [
+            'user'=>$user,
+            'groupes'=>$groupes
+      ];
+
+
+      //var_dump($groupes);
+    
     }
 
     public function httpPostMethod(Http $http, array $formFields)
     {
-    	/*
-    	 * Méthode appelée en cas de requête HTTP POST
-    	 *
-    	 * L'argument $http est un objet permettant de faire des redirections etc.
-    	 * L'argument $formFields contient l'équivalent de $_POST en PHP natif.
-    	 */
+
+      $userModel = new UserModel();
+      $userModel->changeUserProfil($_POST, $_SESSION['user']['Id']);
+
+      $http->redirectTo('/user/profil');
+
     }
 }

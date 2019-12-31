@@ -1,17 +1,17 @@
 <?php
 
-class LoginController
+class RoleController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
 
     }
 
+
+
     public function httpPostMethod(Http $http, array $formFields)
     {
-      $userModel = new UserModel();
-      $userModel->signIn($_POST);
+    	
 
-      $http->redirectTo('/accueil');
     }
 }

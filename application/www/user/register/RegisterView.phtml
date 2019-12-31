@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?= $wwwUrl ?>/css/login.css">
 
 <div>
-  <img class="title--M" src="<?= $wwwUrl ?>/images/musique/13.jpg" alt="photo">
+  <img class="title--M" src="<?= $wwwUrl ?>/images/musique/15.jpg" alt="photo">
 </div>
 
 <div class="register">
@@ -10,9 +10,9 @@
 	<form class="b-form" action="<?=$requestUrl?>/user/register" method="POST">
     <label for="nomgroupe">Nom du Groupe</label>
        <select id="nomgroupe" name="nomgroupe">
-             <?php foreach($authors as $author): ?>
-               <option value="<?= intval($author['Id']) ?>"><?= htmlspecialchars($author['nomgroupe']) ?></option>
-             <?php endforeach ?>
+         <?php foreach ($groupes as $groupe) { ?>
+           <option value="<?= $groupe['groupeid'] ?>"><?= $groupe['nomgroupe'] ?></option>
+         <?php } ?>
       </select>
     <input type="text" name="firstname" placeholder="Prénom">
 		<input type="text" name="lastname" placeholder="Nom">

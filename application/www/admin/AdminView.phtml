@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/admin.css">
+
+<h1>Admin</h1>
+<div>
+  <h2>Gestion des groupes</h2>
+  <a class="" href="<?=$requestUrl ?>/admin/add"><i class="fas fa-plus-circle"></i> Ajouter un nouveau groupe</a>
+<table class="">
+  <tr class="">
+    <td>Photo</td>
+    <td>Nom</td>
+    <td>Action</td>
+  </tr>
+
+  <?php foreach ($groupes as $groupe) { ?>
+    <tr>
+      <td><img src="<?= $wwwUrl ?>/images/groupe/<?=$groupe['photo']?>"></td>
+      <td><?=$groupe['nomgroupe']?></td>
+      <td>
+          <a href="<?=$requestUrl ?>/admin/update?id=<?=$groupe['groupeid']?>"><i class="fas fa-pen"></i></a>
+					<a href="<?=$requestUrl ?>/admin/delete?id=<?=$groupe['groupeid']?>"><i class="fas fa-trash-alt"></i></a>
+      </td>
+    </tr>
+  <?php } ?>
+  </table>
+
+ <hr/>
+ <h4>Gestion des musiciens</h4>
+
+ <table class="">
+
+   <tr>
+     <td>Nom</td>
+     <td>Prénom</td>
+     <td>Email</td>
+   </tr>
+   <?php foreach($musiciens as $musicien) {?>
+       <?php if($musicien['email'] !== $_SESSION['user']['email']) { ?>
+       <tr>
+       <td><?=$musicien['firstname']?></td>
+       <td><?=$musicien['lastname']?></td>
+       <td><?=$musicien['email']?></td>
+       <td><a href="<?=$requestUrl ?>/admin/delete?id=<?=$groupe['groupeid']?>"><i class="fas fa-trash-alt"></i></a></td>
+     </tr>
+       <?php } ?>
+       <?php } ?>
+ </table>
+
+
+</div>

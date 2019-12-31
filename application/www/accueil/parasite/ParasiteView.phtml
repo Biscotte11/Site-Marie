@@ -3,39 +3,55 @@
 
 <section>
 
-<div class="div--parasite">
-  <img class="title--img" src="<?= $wwwUrl ?>/images/parasite/para.jpg" alt="titre">
+  <div class="div--parasite">
+    <img class="title--img" src="<?= $wwwUrl ?>/images/parasite/para.jpg" alt="titre">
 
-  <img class="img-neuf" src="<?= $wwwUrl ?>/images/musique/9.jpg"  alt="parasite sans s">
-  <p class="p--parasite">Présentation du groupe :
-    <br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <img class="img-neuf" src="<?= $wwwUrl ?>/images/musique/9.jpg"  alt="parasite sans s">
+    <p class="p--parasite">Présentation du groupe :
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  <img class="groupe--img" src="<?= $wwwUrl ?>/images/parasite/groupe.jpg" alt="photo">
-</div>
+      <img class="groupe--img" src="<?= $wwwUrl ?>/images/parasite/groupe.jpg" alt="photo">
+    </div>
 
-  <div class="header--slider">
-    <button class="prec"><i class="fas fa-arrow-left"></i></button>
+    <div class="para--calendar">
+      <p class="para--parasite"><strong>Infos : </strong>
+        <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  <div class="your-class">
-  <div><img src="<?= $wwwUrl ?>/images/parasite/douze.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/quatre.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/six.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/trois.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/treize.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/deux.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/huit.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/quatorze.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/sept.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/quinze.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/seize.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/one.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/two.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/three.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/parasite/four.jpg" alt="photo"></div>
-  <div><img class="five" src="<?= $wwwUrl ?>/images/parasite/five.jpg" alt="photo"></div>
-</div>
-<button class="next"><i class="fas fa-arrow-right"></i></button>
-</div>
+      <form  class="para--parasite form" action="<?=$requestUrl?>/parasite" method="POST">
+        <label>Calendrier</label>
+        <input type="text" name="event" placeholder="Evènement">
+        <input type="text" name="heure" placeholder="Heure">
+        <input type="text" name="adresse" placeholder="Adresse">
+        <input type="text" name="zip" placeholder="Code postal">
+        <input type="text" name="date" placeholder="Date">
+        <input type="text" name="infos" placeholder="Informations">
+        <input class="button-register" type="submit" value="Valider">
+      </form>
+    </div>
 
-</section>
+    <div class="header--slider">
+      <button class="prec"><i class="fas fa-arrow-left"></i></button>
+
+      <div class="your-class">
+        <div><img src="<?= $wwwUrl ?>/images/parasite/douze.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/quatre.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/six.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/trois.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/treize.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/deux.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/huit.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/quatorze.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/sept.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/quinze.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/seize.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/one.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/two.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/three.jpg" alt="photo"></div>
+        <div><img src="<?= $wwwUrl ?>/images/parasite/four.jpg" alt="photo"></div>
+        <div><img class="five" src="<?= $wwwUrl ?>/images/parasite/five.jpg" alt="photo"></div>
+      </div>
+      <button class="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+
+  </section>

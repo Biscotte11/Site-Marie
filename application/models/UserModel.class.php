@@ -2,32 +2,36 @@
 
 class UserModel {
   public function signUp($post) {
+    var_dump($post);
     $database = new Database();
     $user = $database->queryOne
     (
-      'SELECT Id from users WHERE Email = ?', [ $post['email']]
+      'SELECT Id from users WHERE email = ?', [ $post['email']]
     );
     if ($user !== false) {
       var_dump("Ce n'est pas le bon Email");
     } else {
       $sql = 'INSERT INTO users
-      ( nomgroupe,
-        firstname,
+      ( firstname,
         lastname,
         email,
         password,
-      role) VALUES (?, ?, ?, ?, ?, "user")';
+        role,
+        groupe_id
+
+    ) VALUES (?, ?, ?, ?, "user", ?)';
         $passwordHash= $this->hashPassword($post['password']);
         var_dump($passwordHash);
         $database->executeSql($sql, [
-          $post['nomgroupe'],
           $post['firstname'],
           $post['lastname'],
           $post['email'],
-          $passwordHash
+          $passwordHash,
+          $post['nomgroupe']
         ]);
       }
     }
+
 
     private function verifyPassword($password, $hashedPassword)
     {
@@ -59,43 +63,61 @@ class UserModel {
            var_dump('non !');
        }
 
-       if($this->verifyPassword($post['password'], $user['Password']) == false)
+       if($this->verifyPassword($post['password'], $user['password']) == false)
        {
            var_dump('Le mot de passe spécifié est incorrect');
        } else {
-           $_SESSION['user']['id'] = $user['Id'];
-           $_SESSION['user']['nomgroupe'] = $user['nomgroupe'];
+           $_SESSION['user']['Id'] = $user['Id'];
            $_SESSION['user']['firstname'] = $user['firstname'];
            $_SESSION['user']['lastname'] = $user['lastname'];
            $_SESSION['user']['email'] = $user['email'];
            $_SESSION['user']['role'] = $user['role'];
+           $_SESSION['user']['groupe_id'] = $user['groupe_id'];
        }
        //var_dump($_SESSION);
      }
 
-       public function changeUserRole($id, $role)
-   {
-        $database = new Database();
+        public function nomGroupe() {
 
-        $sql = 'UPDATE users SET role=? WHERE Id=?';
-        $database->executeSql($sql, [$role, $id]);
+        $database = new Database();
+        $sql= 'SELECT * FROM groupe';
+
+        $groupes = $database->query($sql);
+        return $groupes;
    }
 
-   public function nomGroupe ($post) {
+   public function changeUserProfil($post, $id)
+    {
+        $database = new Database();
+        $sql = 'UPDATE users SET firstname=?, lastname=?, email=?, groupe_id=? WHERE Id=?';
+
+         $database->executeSql($sql,
+                                [
+                                    $post['firstname'],
+                                    $post['lastname'],
+                                    $post['email'],
+                                    $post['nomgroupe'],
+                                    $id
+                                ]);
+    }
+
+    public function listAllUsers()
+    {
         $database = new Database();
 
-        $sql= 'SELECT
-             groupeid,
-         FROM
-             groupe'
-     );
+        $sql = 'SELECT
+                    *
+                FROM users';
 
- $query->execute();
+        return $database->query($sql, []);
+    }
 
- $authors = $query->fetchAll(PDO::FETCH_ASSOC);
+    public function getOneUser($id) {
+      $database = new Database();
+      $sql = 'SELECT * FROM users WHERE Id = ?';
 
-
-   }
+      return $database->queryOne($sql, [$id]);
+  }
 
   }
   ?>

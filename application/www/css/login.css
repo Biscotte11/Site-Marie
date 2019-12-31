@@ -8,7 +8,12 @@ img {
   height: 500px;
   margin: 8px;
   object-fit: cover;
-  object-position: center;
+  object-position: bottom;
+  /* opacity: 0.5; */
+}
+
+.opacityClass {
+  opacity: 0.5; 
 }
 
 .connexion {
