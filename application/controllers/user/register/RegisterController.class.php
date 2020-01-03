@@ -4,8 +4,8 @@ class RegisterController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
-      $userModel = new UserModel();
-      $groupes = $userModel->nomGroupe();
+      $groupeModel = new GroupeModel();
+      $groupes = $groupeModel->nomGroupe();
 
       //var_dump($groupes);
       return [

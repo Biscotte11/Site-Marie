@@ -18,27 +18,42 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 18px;
+	font-size: 30px;
 }
 
-.nav-bar--deux{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+#nav-bar--deux> a, #user--connect>a{
+	margin: 15px;
 }
 
-.nav--list>a {
+#nav-bar--deux .under-nav-list {
+	position: absolute;
+  top: 75px;
+  right: 8px;
+  text-align: center;
+  z-index: 9;
+  padding: 10px;
+  background-color: white;
+  width: 12%;
+}
+
+.under-nav-list .texte{
+	text-decoration: none;
+	color: #136267;
+	font-weight: bold;
+	margin: 20px;
+}
+
+.nav--list>a{
 	display: block;
 	width: 100%;
 }
 
 .bar--deux {
   color: white;
-  padding: 0px 18px;
-  font-size: 30px;
+	font-size: 30px;
 }
 
-.fa-home, .user {
-  font-size: 30px;
+.fa-home {
   color: white;
 }
 
@@ -48,14 +63,6 @@ header {
 
 .user {
   margin-right: auto;
-}
-
-.hide {
-	display: none;
-}
-
-.nav--hide {
-
 }
 
 footer {

@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
 <link rel="stylesheet" href="<?= $wwwUrl ?>/css/admin.css">
 
-<h1>Admin</h1>
-<div>
-  <h2>Gestion des groupes</h2>
-  <a class="" href="<?=$requestUrl ?>/admin/add"><i class="fas fa-plus-circle"></i> Ajouter un nouveau groupe</a>
-<table class="">
-  <tr class="">
+<h1 class="title--admin">Admin</h1>
+<hr>
+<div class="container">
+  <h2 class="title--admin">Gestion des groupes</h2>
+  <a class="add" href="<?=$requestUrl ?>/admin/add"><i class="fas fa-plus-circle"></i> Ajouter un nouveau groupe</a>
+<table class="table">
+  <tr>
     <td>Photo</td>
     <td>Nom</td>
     <td>Action</td>
@@ -17,34 +18,44 @@
       <td><img src="<?= $wwwUrl ?>/images/groupe/<?=$groupe['photo']?>"></td>
       <td><?=$groupe['nomgroupe']?></td>
       <td>
-          <a href="<?=$requestUrl ?>/admin/update?id=<?=$groupe['groupeid']?>"><i class="fas fa-pen"></i></a>
-					<a href="<?=$requestUrl ?>/admin/delete?id=<?=$groupe['groupeid']?>"><i class="fas fa-trash-alt"></i></a>
+          <a class="modif" href="<?=$requestUrl ?>/admin/update?id=<?=$groupe['groupeid']?>"><i class="fas fa-pen"></i></a>
+					<a class="modif" href="<?=$requestUrl ?>/admin/delete?id=<?=$groupe['groupeid']?>"><i class="fas fa-trash-alt"></i></a>
       </td>
     </tr>
   <?php } ?>
   </table>
 
+<div id="form--admin">
+  <form  class="table--form parasite-form" action="<?=$requestUrl?>/parasite" method="POST">
+    <h2>Calendrier</h2>
+    <input type="text" name="event" placeholder="Evènement">
+    <input type="text" name="heure" placeholder="Heure">
+    <input type="text" name="adresse" placeholder="Adresse">
+    <input type="text" name="zip" placeholder="Code postal">
+    <input type="text" name="date" placeholder="Date">
+    <input type="text" name="infos" placeholder="Informations">
+    <input class="button" type="submit" value="Valider">
+  </form>
+</div>
+
  <hr/>
  <h4>Gestion des musiciens</h4>
 
- <table class="">
-
+ <table class="table">
    <tr>
      <td>Nom</td>
      <td>Prénom</td>
      <td>Email</td>
    </tr>
-   <?php foreach($musiciens as $musicien) {?>
+    <?php foreach($musiciens as $musicien) { ?>
        <?php if($musicien['email'] !== $_SESSION['user']['email']) { ?>
        <tr>
        <td><?=$musicien['firstname']?></td>
        <td><?=$musicien['lastname']?></td>
        <td><?=$musicien['email']?></td>
-       <td><a href="<?=$requestUrl ?>/admin/delete?id=<?=$groupe['groupeid']?>"><i class="fas fa-trash-alt"></i></a></td>
+       <td><a class="add" href="<?=$requestUrl ?>/user/delete?id=<?=$musicien['Id']?>"><i class="fas fa-trash-alt"></i></a></td>
      </tr>
        <?php } ?>
        <?php } ?>
  </table>
-
-
 </div>

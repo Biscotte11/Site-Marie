@@ -1,12 +1,37 @@
 img {
-    width: 466px;
+    width: 352px;
     height: 246px;
     object-fit: cover;
     object-position: center;
+    margin: 0;
+}
+
+.bar--deux .nav--list {
+  position: absolute;
+  top: 75px;
+  right: 134px;
+  z-index: 9;
+  padding: 0px;
+  background-color: white;
+  width: 10%;
+  font-size: 18px;
+}
+
+.nav-bar a:hover {
+	color: #28BDA9;
+}
+
+.nav--list .texte {
+  text-decoration: none;
+	color: #136267;
+	font-weight: bold;
+	margin: 0;
+  display: inline-block;
+  padding: 4px; 
 }
 
 .title--M{
-  width: 460px;
+  width: 407px;
   height: 250px;
   object-fit: cover;
   object-position: center;
@@ -24,12 +49,12 @@ img {
   font-family: 'Roboto Mono', monospace;
   text-align: center;
   line-height: 1.5;
-  font-size: 42px;
+  font-size: 38px;
 }
 
 .img--meigmata{
   /*float: right;*/
-  width: 460px;
+  width: 420px;
   height: 250px;
   object-fit: cover;
   object-position: center;
@@ -56,14 +81,38 @@ img {
   z-index: 3;
 }
 
-.header--slider {
-  margin-bottom: 10px;
-  margin-bottom: 10px;
+.div--meig {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.meig--para {
+  width: 30%;
+  justify-content: space-between;
+  border: 2px solid #136267;
+  padding: 12px;
+  font-family: 'Open Sans', sans-serif;
+  margin:0;
+}
+
+.artistes {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: #136267;
+  display: block;
 }
 
 .video {
-  display: inline-flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.header--slider {
+  margin-bottom: 15px;
 }

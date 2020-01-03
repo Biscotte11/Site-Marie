@@ -1,12 +1,36 @@
 img {
-  width: 466px;
+  width: 353px;
   height: 246px;
   object-fit: cover;
   object-position: center;
 }
 
-.title--pop {
-  width: 930px;
+.bar--deux .nav--list {
+  position: absolute;
+  top: 75px;
+  right: 134px;
+  z-index: 9;
+  padding: 0px;
+  background-color: white;
+  width: 10%;
+  font-size: 18px;
+}
+
+.nav-bar a:hover {
+	color: #28BDA9;
+}
+
+.nav--list .texte {
+  text-decoration: none;
+	color: #136267;
+	font-weight: bold;
+	margin: 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.title--id {
+  width: 650px;
   height: 250px;
   object-fit: cover;
   float: right;
@@ -14,7 +38,7 @@ img {
 }
 
 .img--2 {
-  width: 350px;
+  width: 335px;
   height: 200px;
   object-fit: cover;
   object-position: center;
@@ -26,6 +50,7 @@ img {
   margin-bottom: 10px;
   font-family: 'Roboto Mono', monospace;
   color: #9A180E;
+  font-size: 38px;
 }
 
 .header--slider{

@@ -13,5 +13,10 @@ class LoginController
       $userModel->signIn($_POST);
 
       $http->redirectTo('/accueil');
+
+      // $userModel = new UserModel();
+      // $userModel->connectUser($_POST);
+      //
+      // $http->redirectTo('/');
     }
 }

@@ -2,11 +2,12 @@ img {
   width: 100%;
   height: auto;
   margin: 20px;
+  z-index: -1;
 }
 
 body {
-  background-color: #D6D6D6;
-  font-family: 'Roboto Mono', monospace;
+ background-color: #D6D6D6;
+ font-family: 'Roboto Mono', monospace;
 }
 
 #accueil--div {
@@ -22,24 +23,11 @@ body {
   display: inline-block;
 }
 
-.position {
-  position: absolute;
-  left: 1453px;
-  top: 70px;
+.under-nav-list{
+  font-size: 18px;
+  display: block;
   color: white;
   text-decoration: none;
-  font-size: 19px;
-}
-
-.position>a:hover {
-	color: #136267;
-}
-
-.position>a {
-  color: black;
-  text-decoration: none;
-  display: inline-flex;
-  width: 100%;
 }
 
 .home--img-cinq {
@@ -47,6 +35,7 @@ width: 458px;
 height: 386px;
 object-fit: cover;
 padding-top: 10px;
+opacity: 0.7;
 }
 
 .home--img-six {
@@ -56,6 +45,7 @@ object-fit: cover;
 object-position: right;
 padding-top: 10px;
 border-radius: 50%;
+opacity: 0.7;
 }
 
 .home--img-sept {
@@ -63,6 +53,7 @@ width: 456px;
 height: 275px;
 object-fit: cover;
 margin-bottom: 10px;
+opacity: 0.7;
 }
 
 .home--img-huit {
@@ -70,14 +61,26 @@ width: 496px;
 height: 239px;
 object-fit: cover;
 margin-top: 25px;
+opacity: 0.7;
+}
+
+.bis {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  left: 472px;
+  top: 340px;
+  object-fit: fill;
+  z-index: 10;
+  border-radius: 50%;
 }
 
 .title--parasite {
 position: absolute;
 width: 292px;
 height: 43px;
-left: 266px;
-top: 81px;
+left: 153px;
+top: 87px;
 color: black;
 font-family: 'Roboto Mono', monospace;
 }
@@ -86,8 +89,8 @@ font-family: 'Roboto Mono', monospace;
 position: absolute;
 width: 272px;
 height: 43px;
-left: 1136px;
-top: 270px;
+left: 857px;
+top: 268px;
 color: white;
 font-family: 'Roboto Mono', monospace;
 }
@@ -97,20 +100,28 @@ font-family: 'Roboto Mono', monospace;
 position: absolute;
 width: 272px;
 height: 43px;
-left: 253px;
-top: 669px;
+left: 254px;
+top: 723px;
 color: white;
 }
 
 .title--frere {
 font-family: 'Roboto Mono', monospace;
 position: absolute;
-width: 410px;
+width: 100px;
 height: 35px;
-left: 1040px;
-top: 656px;
+left: 1009px;
+top: 588px;
 color: white;
 text-align: center;
+}
+
+.nav-bar a:hover {
+	color: #28BDA9;
+}
+
+.nav-list1 :hover {
+	color: #28BDA9;
 }
 
 .user {

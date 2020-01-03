@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Site Marie Mercier</title>
-    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize.css">
-    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Site Marie Mercier</title>
+  <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize.css">
+  <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
 
-    <!-- Feuilles de styles de l'application -->
-    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+  <!-- Feuilles de styles de l'application -->
+  <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+  <link rel="stylesheet" href="<?= $wwwUrl ?>/css/accueil.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap" rel="stylesheet">
 
-    <!-- Librairie jQuery -->
-    <script
+  <!-- Librairie jQuery -->
+  <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
@@ -22,75 +23,68 @@
   <link rel="stylesheet" type="text/css" href="<?= $wwwUrl ?>/slick/slick.css"/>
 
 
-    <!-- JavaScript de l'application -->
-    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+  <!-- JavaScript de l'application -->
+  <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
 </head>
 <body>
 
-<!-- En-tête commune -->
-<header>
+  <!-- En-tête commune -->
+  <header>
+    <nav class="nav-bar container">
+      <div class="nav-list1">
+        <a href="<?= $requestUrl ?>/accueil"><i class="fas fa-home"></i></a>
+      </div>
 
-<!-- Interface utilisateur -->
-<nav class="nav-bar container">
-    <div class="nav-list1">
-        <a class="" href="<?= $requestUrl ?>/accueil"><i class="fas fa-home"></i></a>
+      <div id="nav-bar--deux" class="bar--deux">
+        <a><i class="fas fa-calendar-minus"></i></a>
+        <a id="liens"><i class="fas fa-link"></i></a>
+
+
+      <div id="user--connect" class="bar--deux">
+        <a><i class="fas fa-user user"></i></a>
+        <div class="under-nav-list hide">
+
+          <?php if (array_key_exists('user', $_SESSION)){ ?>
+
+            <a class="texte" href="<?= $requestUrl ?>/user/profil">Mon Profil</a>
+
+            <?php if($_SESSION['user']['role'] == 'admin') {?>
+
+              <a class="texte" href="<?= $requestUrl ?>/admin">Admin</a>
+
+            <?php } ?>
+
+            <a class="texte" href="<?= $requestUrl ?>/user/logout">Déconnexion</a>
+
+          <?php } else {?>
+            <div id="opa" class="nav--hide position">
+              <a class="texte" href="<?= $requestUrl ?>/user/login">Connexion</a>
+              <a class="texte" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
+            </div>
+
+          </div>
+
+        <?php } ?>
+      </div>
     </div>
-
-
-      <div class="nav-bar--deux">
-
-        <a><i class="fas fa-calendar-minus bar--deux"></i></a>
-        <a href="https://www.facebook.com/parasitesanss/"><i class="fas fa-link bar--deux"></i></a>
-        <a><i class="fas fa-shopping-basket bar--deux"></i></a>
-
-        <div id="user--connect">
-
-        <i class="fas fa-user user bar--deux"></i>
-          <div class="under-nav-list hide">
-
-            <?php if (array_key_exists('user', $_SESSION)){ ?>
-
-              <a href="<?= $requestUrl ?>/user/profil">Mon Profil</a>
-
-              <?php if($_SESSION['user']['role'] == 'admin') {?>
-
-                <a class="" href="<?= $requestUrl ?>/admin">Admin</a>
-
-              <?php } ?>
-
-              <a class="" href="<?= $requestUrl ?>/user/logout">Déconnexion</a>
-
-            <?php } else {?>
-         <div id="opa" class="nav--hide position">
-
-           <a class="" href="<?= $requestUrl ?>/user/login">Connexion</a>
-           <a class="" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
-         </div>
-
-         </div>
-       <?php } ?>
-
-     </div>
-        </div>
-
-</nav>
-
+  </nav>
 </header>
-<main class="container">
+
+  <main class="container">
 
     <!-- Affichage du template lié à la vue -->
     <?php include $this->viewData['template'] ?>
-</main>
+  </main>
 
-<!-- Pied de page commun -->
-<footer>
+  <!-- Pied de page commun -->
+  <footer>
     <small>copyright Marie Mercier</small>
-</footer>
+  </footer>
 
-<!-- Code principal JavaScript de l'application -->
-<script src="<?= $wwwUrl ?>/js/main.js"></script>
-<script src="<?= $wwwUrl ?>/js/slick.js"></script>
-<script type="text/javascript" src="<?= $wwwUrl ?>/slick/slick.min.js"></script>
+  <!-- Code principal JavaScript de l'application -->
+  <script src="<?= $wwwUrl ?>/js/main.js"></script>
+  <script src="<?= $wwwUrl ?>/js/slick.js"></script>
+  <script type="text/javascript" src="<?= $wwwUrl ?>/slick/slick.min.js"></script>
 
 </body>
 </html>

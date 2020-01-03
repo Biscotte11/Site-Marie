@@ -8,8 +8,7 @@
 <div class="register">
 	<h3 class="title--register">Enregistrez vous</h3>
 	<form class="b-form" action="<?=$requestUrl?>/user/register" method="POST">
-    <label for="nomgroupe">Nom du Groupe</label>
-       <select id="nomgroupe" name="nomgroupe">
+       <select class="button" id="nomgroupe" name="nomgroupe">
          <?php foreach ($groupes as $groupe) { ?>
            <option value="<?= $groupe['groupeid'] ?>"><?= $groupe['nomgroupe'] ?></option>
          <?php } ?>

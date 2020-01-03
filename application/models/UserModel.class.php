@@ -1,6 +1,7 @@
 <?php
 
 class UserModel {
+
   public function signUp($post) {
     var_dump($post);
     $database = new Database();
@@ -77,14 +78,14 @@ class UserModel {
        //var_dump($_SESSION);
      }
 
-        public function nomGroupe() {
+     public function connectUser($post) {
+           $database = new Database();
 
-        $database = new Database();
-        $sql= 'SELECT * FROM groupe';
+   		     $user = $database->queryOne
+           ('SELECT * FROM users WHERE email =?', [ $post['email'] ]);
+    }
 
-        $groupes = $database->query($sql);
-        return $groupes;
-   }
+
 
    public function changeUserProfil($post, $id)
     {
@@ -117,6 +118,36 @@ class UserModel {
       $sql = 'SELECT * FROM users WHERE Id = ?';
 
       return $database->queryOne($sql, [$id]);
+  }
+
+
+  public function addGroupe($post, $files) {
+    $database = new Database();
+
+    $sql = 'INSERT INTO groupe (nomgroupe, photo) VALUES (?, ?)';
+
+    $database->executeSql($sql, [$post['nomgroupe'],
+                                $files['photo']['name']
+                              ]);
+
+  }
+
+  public function deleteGroupe($id) {
+
+       $database = new Database();
+
+       $sql = 'DELETE FROM groupe WHERE groupeid=?';
+
+       $database->executeSql($sql, [ $id ]);
+
+   }
+
+  public function deleteUser($id) {
+        $database = new Database();
+
+        $sql = 'DELETE FROM users WHERE Id=?';
+
+        $database->executeSql($sql, [$id]);
   }
 
   }

@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/add.css">
+
+<div class="container">
+<h3>Ajoutez un nouveau groupe</h3>
+<a class="add" href="<?= $requestUrl ?>/admin"><i class="fas fa-arrow-circle-left"></i></a>
+
+<form class="table table--form" action="<?= $requestUrl ?>/admin/add" method="POST" enctype="multipart/form-data">
+
+
+  <input type="text"  name="nomgroupe" placeholder="Nom du groupe">
+  <input type="file"  name="photo"
+       accept="image/png, image/jpeg">
+  <textarea name="description"
+               rows="5" cols="33">
+  </textarea>
+  <input class="button" type="submit" value="Valider">
+</form>
+</div>

@@ -3,37 +3,78 @@ body {
 }
 
 img {
-  width: 468px;
-  height: 246px;
+  width: 357px;
+  height: 250px;
   object-fit: cover;
   object-position: center;
+  margin:0;
+}
+
+.nav--list{
+  font-size: 18px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.bar--deux .nav--list {
+  position: absolute;
+  top: 75px;
+  right: 134px;
+  text-align: center;
+  z-index: 9;
+  padding: 0px;
+  background-color: white;
+  width: 11%;
+}
+
+.nav--list .texte {
+  text-decoration: none;
+	color: #136267;
+	font-weight: bold;
+	margin: 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.nav--list.texte :hover {
+  color: #28BDA9;
+}
+
+.hide {
+  display: none;
 }
 
 .title--img {
 clear: both;
 object-fit: contain;
 object-position: center;
-width: 500px;
+width: 494px;
+margin: 0;
+padding-right: 2px;
 }
 
 .img-neuf {
-  width: 680px;
+  width: 551px;
   height: 291px;
   /*float: left;*/
   object-fit: cover;
   object-position: top;
   margin-bottom: 0px 10px 10px 10px;
   padding-left: 10px;
+  margin: 0;
 }
 
 .groupe--img {
-  width: 500px;
+  width: 508px;
+  height: 281px;
+  margin:0;
 }
 
 .p--parasite {
   float: right;
-  width: 63%;
-  font-size: 19px;
+  width: 50%;
+  font-size: 18px;
   padding: 10px 10px;
   margin: 0;
   line-height: 1.4;
@@ -50,6 +91,7 @@ width: 500px;
   clear: both;
   height: 250px;
   width: 100%;
+  margin-bottom: 28px;
 }
 
 .five {
@@ -76,11 +118,36 @@ width: 500px;
   width: 39%
 }
 
+.div--para {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.p--para {
+  width: 30%;
+  justify-content: space-between;
+  border: 2px solid #136267;
+  padding: 12px;
+  font-family: 'Open Sans', sans-serif;
+  margin:0;
+}
+
+.artistes {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: #136267;
+  display: block;
+}
+
 .prec {
   font-size: 22px;
   padding: 2px 15px;
-  left: 125px;
-  top: 937px;
+  left: 96px;
+  top: 1448px;
   position: absolute;
   z-index: 2;
   background-color: lightgrey;
@@ -91,8 +158,8 @@ width: 500px;
   font-size: 22px;
   padding: 2px 15px;
   z-index: 2;
-  left: 1485px;
-  top: 1155px;
+  left: 1128px;
+  top: 1666px;
   position: absolute;
   background-color: lightgrey;
   border: none;

@@ -7,7 +7,7 @@ class AdminController
    if(empty($_SESSION) == true || $_SESSION['user']['role'] !== "admin" ) {
          $http->redirectTo('/');
      }
-     $userModel = new UserModel();
+     $userModel = new GroupeModel();
      $groupes = $userModel->nomGroupe();
 
      $userModel = new UserModel();
@@ -17,6 +17,8 @@ class AdminController
            'groupes' => $groupes,
            'musiciens'=> $musiciens
        ];
+
+       
  }
 
 

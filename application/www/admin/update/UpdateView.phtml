@@ -1,0 +1,27 @@
+<?php if (empty($oneGroupe) == false) { ?>
+
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/update.css">
+
+<h3>Modifier le groupe</h3>
+<a class="add" href="<?= $requestUrl ?>/admin"><i class="fas fa-arrow-circle-left"></i></a>
+
+<div class="update--form">
+<form class="table" action="<?= $requestUrl ?>/admin/update?id=<?=$_GET['id']?>" method="POST" enctype="multipart/form-data">
+
+
+  <input type="text" name="nomgroupe" placeholder="Nom du Groupe" value="<?=$oneGroupe['nomgroupe']?>">
+  <img src="<?= $wwwUrl?>/images/groupe/<?=$oneGroupe['photo']?>">
+  <input type="file" id="photo" name="photo"
+       accept="image/png, image/jpeg">
+  <textarea id="description" name="description"
+               rows="5" cols="33">
+  </textarea>
+
+  <input type="hidden" name="nomId" value="<?=$_GET['id']?>">
+  
+  <input class="button" type="submit" value="Valider">
+</form>
+</div>
+
+<?php } ?>
