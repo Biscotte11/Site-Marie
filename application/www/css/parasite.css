@@ -3,7 +3,7 @@ body {
 }
 
 img {
-  width: 357px;
+  width: 437px;
   height: 250px;
   object-fit: cover;
   object-position: center;
@@ -17,15 +17,20 @@ img {
   text-decoration: none;
 }
 
+.nav--list a:hover {
+	color: #28BDA9;
+}
+
 .bar--deux .nav--list {
   position: absolute;
-  top: 75px;
-  right: 134px;
+  top: 76px;
+  right: 210px;
   text-align: center;
   z-index: 9;
-  padding: 0px;
+  padding: 6px;
   background-color: white;
-  width: 11%;
+  width: 8%;
+  border: 1px solid #136267;
 }
 
 .nav--list .texte {
@@ -37,10 +42,6 @@ img {
   padding: 4px;
 }
 
-.nav--list.texte :hover {
-  color: #28BDA9;
-}
-
 .hide {
   display: none;
 }
@@ -49,36 +50,35 @@ img {
 clear: both;
 object-fit: contain;
 object-position: center;
-width: 494px;
+width: 522px;
 margin: 0;
 padding-right: 2px;
 }
 
 .img-neuf {
-  width: 551px;
+  width: 680px;
   height: 291px;
-  /*float: left;*/
   object-fit: cover;
   object-position: top;
   margin-bottom: 0px 10px 10px 10px;
-  padding-left: 10px;
+  padding-left: 51px;
   margin: 0;
 }
 
 .groupe--img {
-  width: 508px;
+  width: 563px;
   height: 281px;
   margin:0;
 }
 
 .p--parasite {
-  float: right;
-  width: 50%;
-  font-size: 18px;
-  padding: 10px 10px;
-  margin: 0;
-  line-height: 1.4;
-  font-family: 'Open Sans', sans-serif;
+ float: right;
+ width: 54%;
+ font-size: 18px;
+ padding: 10px 14px;
+ margin: 0;
+ line-height: 1.4;
+ font-family: 'Open Sans', sans-serif;
 }
 
 .div--parasite {
@@ -143,11 +143,36 @@ padding-right: 2px;
   display: block;
 }
 
+.title--concert {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 25px;
+}
+
+.table {
+  border: 2px solid #136267;
+  border-radius: 12px;
+  padding: 15px 2%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.table >td{
+  padding: 15px;
+}
+
+.table>td {
+  border: 2px solid #136267;
+}
+
 .prec {
   font-size: 22px;
   padding: 2px 15px;
-  left: 96px;
-  top: 1448px;
+  left: 125px;
+  top: 1574px;
   position: absolute;
   z-index: 2;
   background-color: lightgrey;
@@ -158,8 +183,8 @@ padding-right: 2px;
   font-size: 22px;
   padding: 2px 15px;
   z-index: 2;
-  left: 1128px;
-  top: 1666px;
+  left: 1499px;
+  top: 1792px;
   position: absolute;
   background-color: lightgrey;
   border: none;

@@ -1,5 +1,5 @@
 img {
-  width: 352px;
+  width: 437px;
   height: 250px;
   object-fit: cover;
   object-position: center;
@@ -50,8 +50,8 @@ img {
   position: absolute;
   width: 117px;
   height: 173px;
-  left: 579px;
-  top: 220px;
+  left: 764px;
+ top: 228px;
   text-align: center;
   line-height: 1.5;
   font-size: 38px;
@@ -98,12 +98,36 @@ img {
   display: block;
 }
 
+.title--concert {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 25px;
+}
+
+.table {
+  border: 2px solid #136267;
+  border-radius: 12px;
+  padding: 15px 2%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.table >td{
+  padding: 15px;
+}
+
+.table>td {
+  border: 2px solid #136267;
+}
+
 .video {
-  width: 86%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 .header--slider{

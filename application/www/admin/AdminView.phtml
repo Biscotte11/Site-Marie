@@ -26,13 +26,18 @@
   </table>
 
 <div id="form--admin">
-  <form  class="table--form parasite-form" action="<?=$requestUrl?>/parasite" method="POST">
+  <form  class="table--form parasite-form" action="<?=$requestUrl?>/admin/addevent" method="POST">
     <h2>Calendrier</h2>
     <input type="text" name="event" placeholder="Evènement">
+    <select class="button" id="nomgroupe" name="nomgroupe">
+      <?php foreach ($groupes as $groupe) { ?>
+        <option value="<?= $groupe['groupeid'] ?>"><?= $groupe['nomgroupe'] ?></option>
+      <?php } ?>
+   </select>
+    <input type="text" name="date" placeholder="Date">
     <input type="text" name="heure" placeholder="Heure">
     <input type="text" name="adresse" placeholder="Adresse">
     <input type="text" name="zip" placeholder="Code postal">
-    <input type="text" name="date" placeholder="Date">
     <input type="text" name="infos" placeholder="Informations">
     <input class="button" type="submit" value="Valider">
   </form>
@@ -46,6 +51,7 @@
      <td>Nom</td>
      <td>Prénom</td>
      <td>Email</td>
+     <td></td>
    </tr>
     <?php foreach($musiciens as $musicien) { ?>
        <?php if($musicien['email'] !== $_SESSION['user']['email']) { ?>

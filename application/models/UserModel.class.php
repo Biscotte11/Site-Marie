@@ -22,7 +22,7 @@ class UserModel {
 
     ) VALUES (?, ?, ?, ?, "user", ?)';
         $passwordHash= $this->hashPassword($post['password']);
-        var_dump($passwordHash);
+        //var_dump($passwordHash);
         $database->executeSql($sql, [
           $post['firstname'],
           $post['lastname'],
@@ -78,12 +78,12 @@ class UserModel {
        //var_dump($_SESSION);
      }
 
-     public function connectUser($post) {
-           $database = new Database();
-
-   		     $user = $database->queryOne
-           ('SELECT * FROM users WHERE email =?', [ $post['email'] ]);
-    }
+    //  public function connectUser($post) {
+    //        $database = new Database();
+    //
+   	// 	     $user = $database->queryOne
+    //        ('SELECT * FROM users WHERE email =?', [ $post['email'] ]);
+    // }
 
 
 

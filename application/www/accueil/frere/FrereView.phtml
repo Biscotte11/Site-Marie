@@ -21,7 +21,7 @@
   <img class="un" src="<?= $wwwUrl ?>/images/frere/img1.jpg" alt="photo">
  </div>
  <h1 class="nom"><span class="nom--span">frere de sac 4tet<span></h1>
-  <p class="p--pop"><span class="underline">Présentation du groupe :</span><br>
+  <p class="p--pop"><span class="underline title--concert">Présentation du groupe :</span><br>
   De la Renaissance française à la transe suédoise, les chemins de traverse des musiques traditionnelles européennes, arpentés par un combo familial au son unique. Timbres oubliés et palette d'arrangements entre puissance et impressionnisme, sont les cartes à jouer de ce corps musical aux 4 membres tour à tour solistes, harmonistes et rythmiciens.
   Avec la complicité du public danseur ou auditeur, s'ouvre un nouveau chapitre du livre de cette fratrie, qui marie la connaissance de la tradition aux audaces du néo-trad.
   Frères de Sac 4tet nous emmène ainsi, sur un tapis sonore généreux, à la recherche d'un folk européen d'aujourd'hui.
@@ -57,6 +57,30 @@
       De nombreuses influences (dont les musiques modales et les musiques répétitives, aux liens intimes avec la musique traditionnelle) ont cristallisé son goût pour l'évidence, la note qui sonne, la mélodie qui marque et l'harmonie qui décale, que ce soit pour ses compositions, pour des reprises traditionnelles ou de compositeurs actuels.
       </p>
     </div>
+
+    <div>
+     <h2 class="title--concert">Concerts à venir</h2>
+      <?php if (empty($events) == false) { ?>
+    <table class="table">
+      <tr class="table">
+        <td>Concerts</td>
+        <td>Date</td>
+        <td>Heure</td>
+        <td>adresse</td>
+        <td>Infos</td>
+      </tr>
+      <?php foreach($events as $event) { ?>
+          <tr  class="table">
+          <td><?=$event['event']?></td>
+          <td><?=$event['date']?></td>
+          <td><?=$event['heure']?></td>
+          <td><?=$event['adresse']?><?=$event['zip']?></td>
+          <td><?=$event['infos']?></td>
+        </tr>
+          <?php } ?>
+    </table>
+    <?php } ?>
+        </div>
 
   <div class="video">
   <iframe width="460" height="315" src="https://www.youtube.com/embed/LWb8EJllr80" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>

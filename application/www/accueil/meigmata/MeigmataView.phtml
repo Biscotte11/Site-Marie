@@ -19,7 +19,7 @@
   <h1 class="title--h1"><strong>Trio Meigmata</strong></h1>
   <img class="img--meigmata" src="<?= $wwwUrl ?>/images/meigmata/groupe.jpg" alt="photo">
  </div>
-  <p class="p--pop"><span class="underline">Présentation du groupe :</span><br>
+  <p class="p--pop"><span class="underline title--concert">Présentation du groupe :</span><br>
     <br>
     Dans les sinuosités structurelles entre compositions originales et improvisations, le groupe Mείgmaτa explore les combinaisons asymétriques fortement influencées par les musiques balkanes, jazz et contemporaines. Entre savoureuses voluptés, mélodies mélismatiques et énergie sauvage, le trio mitonne une étonnante cuisine de raffinements sonores.</p>
 
@@ -37,6 +37,30 @@
       Après des études de percussion classique à la HEM de Genève, Michael Chapon se concentre sur la batterie qu'il étudie à la Los Angeles Music Academy où il se familiarise avec tous styles de musiques actuelles. Son intérêt pour les rythmes de l'Inde ainsi que sa passion pour la danse Flamenca orientent son travail à la batterie vers les musiques à mesures composées, ou encore vers l'accompagnement de danse contemporaine. Il enseigne la batterie au Conservatoire Populaire de Musique de Genève ainsi qu'à l'Institut de Percussion du Pays de Gex.
       </p>
     </div>
+
+    <div>
+      <h2 class="title--concert">Concerts à venir</h2>
+      <?php if (empty($events) == false) { ?>
+    <table class="table">
+      <tr  class="table">
+        <td>Concerts</td>
+        <td>Date</td>
+        <td>Heure</td>
+        <td>adresse</td>
+        <td>Infos</td>
+      </tr>
+      <?php foreach($events as $event) { ?>
+          <tr  class="table">
+          <td><?=$event['event']?></td>
+          <td><?=$event['date']?></td>
+          <td><?=$event['heure']?></td>
+          <td><?=$event['adresse']?><?=$event['zip']?></td>
+          <td><?=$event['infos']?></td>
+        </tr>
+          <?php } ?>
+    </table>
+    <?php } ?>
+        </div>
 
   <div class="video">
   <iframe class="meig--videos" width="460" height="315" src="https://www.youtube.com/embed/mPexrSD1_Lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>

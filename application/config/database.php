@@ -5,5 +5,5 @@
  */
 
 $config['dsn']      = 'mysql:host=localhost;dbname=SiteMusique';
-$config['password'] = 'mysql';
+$config['password'] = 'troiswa';
 $config['user']     = 'root';

@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?= $wwwUrl ?>/css/parasite.css">
 
 <header>
-  <div id="liens" class="bar--deux">
+  <div class="bar--deux">
     <div class="nav--list hide">
       <a class="texte" href="https://www.facebook.com/parasitesanss/" target="_blank">Facebook</a>
       <a class="texte" href="https://www.youtube.com/channel/UCYPvwTee8RJ1pp0IYibegUQ/videos" target="_blank">Youtube</a>
@@ -11,12 +11,11 @@
   </div>
 </header>
 <section>
-
   <div class="div--parasite">
     <img class="title--img" src="<?= $wwwUrl ?>/images/parasite/para.jpg" alt="titre">
 
     <img class="img-neuf" src="<?= $wwwUrl ?>/images/musique/9.jpg"  alt="parasite sans s">
-    <p class="p--parasite">Présentation du groupe :
+    <p class="p--parasite"><span class="underline title--concert">Présentation du groupe :</span>
       <br>
       La musique improvisée de PARASITE SANS S trace la cartographie des émotions. Elle se veut lunaire, mais triomphante, entre le bourdon et les plumes, tantôt elle fait peur, tantôt elle rassure, mais jamais elle ne suit un tracé balisé. Sciemment elle cherche les broussailles électriques et les pas qui déraillent. Ses atmosphères chamaniques se perdent avec délice dans des expérimentations qui recyclent les traditions ancestrales sous l'œil de la chimère.
       <br>Naturellement les choses se croisent un pied dans le passé, l’autre dans le présent et le troisième dans l’ultra-futur.</p>
@@ -39,6 +38,30 @@
       Attirée par la collaboration avec le département de composition de la HEM de Genève, Marie Mercier a développé son esthétique autour de la musique contemporaine et expérimentale et a accru ses possibilités instrumentales à travers la clarinette basse et la clarinette contrebasse bénéficiant des conseils de David Poissonnier, Alain Billard, Luis Naon, Pascal Dusapin, Philippe Manoury, Philippe Albéra, et Alexandre Babel.
       Ceci enclencha un virage musical stimulé par le besoin de s’imprégner d’autres domaines artistiques ainsi que diverses approches musicales. Les rencontres découlant de cette démarche furent décisives.
       </p>
+    </div>
+
+<div>
+  <h2 class="title--concert">Concerts à venir</h2>
+  <?php if (empty($events) == false) { ?>
+<table class="table">
+  <tr class="table">
+    <td>Concerts</td>
+    <td>Date</td>
+    <td>Heure</td>
+    <td>adresse</td>
+    <td>Infos</td>
+  </tr>
+  <?php foreach($events as $event) { ?>
+      <tr class="table">
+      <td><?=$event['event']?></td>
+      <td><?=$event['date']?></td>
+      <td><?=$event['heure']?></td>
+      <td><?=$event['adresse']?><?=$event['zip']?></td>
+      <td><?=$event['infos']?></td>
+    </tr>
+      <?php } ?>
+</table>
+<?php } ?>
     </div>
 
     <div class="header--slider">

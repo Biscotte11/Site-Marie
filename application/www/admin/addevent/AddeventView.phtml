@@ -1,0 +1,23 @@
+<div>
+  <?php if (empty($event) == false) { ?>
+<table class="table">
+  <tr>
+    <td>Concerts</td>
+    <td>Date</td>
+    <td>Heure</td>
+    <td>adresse</td>
+    <td>Infos</td>
+  </tr>
+  <?php foreach($events as $event) { ?>
+      <tr>
+      <td><?=$event['event']?></td>
+
+      <td><?=$event['date']?></td>
+      <td><?=$event['heure']?></td>
+      <td><?=$event['adresse']?><?=$event['zip']?></td>
+      <td><?=$event['infos']?></td>
+    </tr>
+      <?php } ?>
+</table>
+<?php } ?>
+    </div>

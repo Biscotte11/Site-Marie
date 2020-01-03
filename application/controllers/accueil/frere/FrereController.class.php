@@ -4,12 +4,16 @@ class FrereController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
-    	/*
-    	 * Méthode appelée en cas de requête HTTP GET
-    	 *
-    	 * L'argument $http est un objet permettant de faire des redirections etc.
-    	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
-    	 */
+      //var_dump($_GET);
+      $id= $_GET['id'];
+      $concertModel = new ConcertsModel();
+      $events = $concertModel->groupeConcert($id);
+
+      //var_dump($events);
+
+      return [
+            'events' => $events
+        ];
     }
 
     public function httpPostMethod(Http $http, array $formFields)

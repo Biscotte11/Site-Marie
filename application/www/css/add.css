@@ -23,6 +23,9 @@ input, label, textarea {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 8px;
+  border-radius: 2px;
+  border: none;
 }
 
 .button {

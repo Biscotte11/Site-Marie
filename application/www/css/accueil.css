@@ -1,8 +1,8 @@
 img {
-  width: 100%;
-  height: auto;
-  margin: 20px;
-  z-index: -1;
+  width: 465px;
+  height: 400px;
+  object-fit: cover;
+  padding: 10px;
 }
 
 body {
@@ -11,9 +11,6 @@ body {
 }
 
 #accueil--div {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   display: inline-flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -21,6 +18,12 @@ body {
 
 #user--connect {
   display: inline-block;
+}
+
+.contain {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .under-nav-list{
@@ -31,56 +34,30 @@ body {
 }
 
 .home--img-cinq {
-width: 458px;
-height: 386px;
-object-fit: cover;
 padding-top: 10px;
-opacity: 0.7;
 }
 
 .home--img-six {
-width: 452px;
-height: 418px;
-object-fit: cover;
 object-position: right;
 padding-top: 10px;
 border-radius: 50%;
-opacity: 0.7;
 }
 
 .home--img-sept {
-width: 456px;
-height: 275px;
-object-fit: cover;
 margin-bottom: 10px;
-opacity: 0.7;
 }
 
 .home--img-huit {
-width: 496px;
-height: 239px;
-object-fit: cover;
-margin-top: 25px;
-opacity: 0.7;
-}
-
-.bis {
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  left: 472px;
-  top: 340px;
-  object-fit: fill;
-  z-index: 10;
-  border-radius: 50%;
+  object-position: left;
+  width: 550px;
 }
 
 .title--parasite {
 position: absolute;
 width: 292px;
 height: 43px;
-left: 153px;
-top: 87px;
+  left: 269px;
+top: 71px;
 color: black;
 font-family: 'Roboto Mono', monospace;
 }
@@ -89,8 +66,8 @@ font-family: 'Roboto Mono', monospace;
 position: absolute;
 width: 272px;
 height: 43px;
-left: 857px;
-top: 268px;
+left: 1101px;
+top: 259px;
 color: white;
 font-family: 'Roboto Mono', monospace;
 }
@@ -100,20 +77,20 @@ font-family: 'Roboto Mono', monospace;
 position: absolute;
 width: 272px;
 height: 43px;
-left: 254px;
-top: 723px;
+left: 370px;
+top: 725px;
 color: white;
 }
 
 .title--frere {
-font-family: 'Roboto Mono', monospace;
-position: absolute;
-width: 100px;
-height: 35px;
-left: 1009px;
-top: 588px;
-color: white;
-text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  width: 289px;
+  height: 35px;
+  left: 1104px;
+  top: 692px;
+  color: white;
+  text-align: center;
 }
 
 .nav-bar a:hover {

@@ -47,8 +47,11 @@ img {
 }
 
 input{
-  padding: 8px;
-  width: 60%;
+ padding: 8px;
+ width: 60%;
+ border-radius: 15px;
+ border: none;
+ margin-top: 8px;
 }
 
 .table tr {
@@ -56,7 +59,7 @@ input{
 }
 
 .table td {
-  padding: 8px 7%;
+  padding: 10px 7%;
   font-size: 22px;
   color: black;
 }
