@@ -12,10 +12,10 @@ img {
 }
 
 .add {
-	color: #28BDA9;
-	font-family: 'Roboto Mono', monospace;
-	font-size: 17px;
-	text-decoration: none;
+  color: #28BDA9;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 17px;
+  text-decoration: none;
 }
 
 
@@ -47,15 +47,15 @@ img {
 }
 
 input{
- padding: 8px;
- width: 60%;
- border-radius: 15px;
- border: none;
- margin-top: 8px;
+  padding: 8px;
+  width: 60%;
+  border-radius: 15px;
+  border: none;
+  margin-top: 8px;
 }
 
 .table tr {
-	border: 2px solid #136267;
+  border: 2px solid #136267;
 }
 
 .table td {
@@ -79,4 +79,61 @@ input{
 
 .modif{
   color: #28BDA9;
+}
+
+@media (max-width: 1024px) {
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 50px;
+    width: 13%;
+    border: 1px solid #136267;
+}
+}
+
+@media (max-width: 768px) {
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 0px;
+    width: 18%;
+    border: 1px solid #136267;
+}
+
+  .container {
+    width:90%;
+  }
+}
+
+@media (max-width: 375px){
+  .title--admin{
+    font-size: 30px;
+  }
+
+  .gestion{
+    font-size: 22px;
+  }
+
+  .container {
+    width: 99%;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .table td {
+    padding: 7px 5%;
+    font-size: 15px;
+    color: black;
+  }
+
+  input {
+    width:80%;
+  }
+
+  .button {
+    width: 46%;
+  }
 }

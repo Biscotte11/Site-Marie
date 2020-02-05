@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/accueil.css">
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/login.css">
+
+<section>
+<div>
+  <img class="title--M" src="<?= $wwwUrl ?>/images/musique/15.jpg" alt="photo">
+</div>
+
+	<form class="form" action="<?=$requestUrl?>/user/reset" method="POST">
+    <fieldset class="b-form">
+    <legend>Saisissez votre adresse mail</legend>
+		<input type="text" name="email" placeholder="email">
+    <input type="submit" value="Envoyer">
+    </fieldset>
+	</form>
+</section>

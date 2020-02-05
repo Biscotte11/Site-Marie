@@ -17,13 +17,11 @@ class AdminController
            'groupes' => $groupes,
            'musiciens'=> $musiciens
        ];
-
-
  }
 
 
     public function httpPostMethod(Http $http, array $formFields)
     {
-      
+
     }
 }

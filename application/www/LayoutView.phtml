@@ -2,19 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Site Marie Mercier</title>
   <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize.css">
   <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
 
   <!-- Feuilles de styles de l'application -->
-  <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
-  <link rel="stylesheet" href="<?= $wwwUrl ?>/css/accueil.css">
+  <link rel="stylesheet" type="text/css" href="<?= $wwwUrl ?>/css/style.css">
+  <link rel="stylesheet" type="text/css" href="<?= $wwwUrl ?>/css/accueil.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap" rel="stylesheet">
-
-  <!-- Librairie jQuery -->
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -35,39 +34,46 @@
         <a href="<?= $requestUrl ?>/accueil"><i class="fas fa-home"></i></a>
       </div>
 
-      <div id="nav-bar--deux" class="bar--deux">
-        <!-- <a><i class="fas fa-calendar-minus"></i></a> -->
-          <a id="liens"><i class="fas fa-link"></i></a>
+      <div class="nav-bar--deux nav-bar" >
 
-      <div id="user--connect" class="bar--deux">
-        <a><i class="fas fa-user user"></i></a>
-        <div class="under-nav-list hide">
+        <!-- <div  id="cacher" class="liens bar--deux">
+          <a><i class="fas fa-link"></i></a>
 
-          <?php if (array_key_exists('user', $_SESSION)){ ?>
+          <div class="bar--link hide">
+          <a class="texte" href="https://www.facebook.com/parasitesanss/" target="_blank">Facebook</a>
+          <a class="texte" href="https://www.youtube.com/channel/UCYPvwTee8RJ1pp0IYibegUQ/videos" target="_blank">Youtube</a>
+        </div>
 
-            <a class="texte" href="<?= $requestUrl ?>/user/profil">Mon Profil</a>
+        </div> -->
 
-            <?php if($_SESSION['user']['role'] == 'admin') {?>
+        <div id="user--connect" class="bar--deux">
+          <a><i class="fas fa-user user"></i></a>
+          <div class="under-nav-list hide">
 
-              <a class="texte" href="<?= $requestUrl ?>/admin">Admin</a>
+            <?php if (array_key_exists('user', $_SESSION)){ ?>
+
+              <a class="texte" href="<?= $requestUrl ?>/user/profil">Mon Profil</a>
+
+              <?php if($_SESSION['user']['role'] == 'admin') {?>
+
+                <a class="texte" href="<?= $requestUrl ?>/admin">Admin</a>
+
+              <?php } ?>
+
+              <a class="texte" href="<?= $requestUrl ?>/user/logout">Déconnexion</a>
+
+            <?php } else {?>
+              <div id="opa" class="nav--hide position">
+                <a class="texte" href="<?= $requestUrl ?>/user/login">Connexion</a>
+                <a class="texte" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
+              </div>
 
             <?php } ?>
-
-            <a class="texte" href="<?= $requestUrl ?>/user/logout">Déconnexion</a>
-
-          <?php } else {?>
-            <div id="opa" class="nav--hide position">
-              <a class="texte" href="<?= $requestUrl ?>/user/login">Connexion</a>
-              <a class="texte" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
-            </div>
-
           </div>
-
-        <?php } ?>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
   <main class="container">
 
@@ -77,6 +83,13 @@
 
   <!-- Pied de page commun -->
   <footer>
+    <div class="first--footer">
+      <p>Contact : marie.mercier@gmail.com</p>
+      <p class="p--footer">Mais aussi professeur <i class="fas fa-graduation-cap prof"></i><br>Conservatoire Populaire de Musique de Geneve </p>
+      <div class="imgF--float">
+        <a href="<?= $requestUrl ?>/accueil/conservatoire"><img class="img--footer" src="<?= $wwwUrl ?>/images/musique/Logo.jpg"></a>
+      </div>
+    </div>
     <small>copyright Marie Mercier</small>
   </footer>
 

@@ -12,11 +12,11 @@ $('.under-nav-list').on('mouseout', function() {
 });
 
 
-$('#liens').on('mouseover', function() {
-	$('.nav--list').removeClass('hide');
+$('.liens').on('mouseover', function() {
+	$('.bar--link').removeClass('hide');
 	$('.under-nav-list').addClass('hide');
 });
 
-$('.nav--list').on('mouseout', function() {
-	$('.nav--list').addClass('hide');
+$('.bar--link').on('mouseout', function() {
+	$('.bar--link').addClass('hide');
 });

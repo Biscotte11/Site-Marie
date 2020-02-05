@@ -1,18 +1,7 @@
-<link rel="stylesheet" href="<?= $wwwUrl ?>/css/meigmata.css">
 <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
-
-<header>
-  <div id="liens" class="bar--deux">
-    <div class="nav--list hide">
-      <a class="texte" href="https://www.facebook.com/Trio-M%CE%B5%E1%BD%B7gma%CF%84a-235810870668756/?ref=bookmarks" target="_blank">Facebook</a>
-      <a class="texte" href="https://www.youtube.com/channel/UCbYvtSG39TLtFSE2dBx9eAA" target="_blank">Youtube</a>
-    </div>
-
-  </div>
-</header>
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/meigmata.css">
 
 <section>
-
 <div class="div--meigmata">
   <div class="essai">
   <img class="title--M" src="<?= $wwwUrl ?>/images/meigmata/nom.png" alt="photo">
@@ -22,7 +11,7 @@
   <p class="p--pop"><span class="underline title--concert">Présentation du groupe :</span><br>
     <br>
     Dans les sinuosités structurelles entre compositions originales et improvisations, le groupe Mείgmaτa explore les combinaisons asymétriques fortement influencées par les musiques balkanes, jazz et contemporaines. Entre savoureuses voluptés, mélodies mélismatiques et énergie sauvage, le trio mitonne une étonnante cuisine de raffinements sonores.</p>
-
+  </div>
     <div class="div--meig">
       <p class="meig--para"><span class="artistes">Laurent Sourisse<br>Clavier</span>
         <br>
@@ -39,9 +28,11 @@
     </div>
 
     <div>
-      <h2 class="title--concert">Concerts à venir</h2>
+      <div class="upcoming">
+      <h2 class="title--concert">Upcoming dates</h2>
       <?php if (empty($events) == false) { ?>
-    <table class="table">
+    <table class="table tableau">
+      <thead class="hide">
       <tr  class="table">
         <td>Concerts</td>
         <td>Date</td>
@@ -49,34 +40,37 @@
         <td>adresse</td>
         <td>Infos</td>
       </tr>
+     </thead>
+     <tbody>
       <?php foreach($events as $event) { ?>
           <tr  class="table">
           <td><?=$event['event']?></td>
-          <td><?=$event['date']?></td>
-          <td><?=$event['heure']?></td>
+          <td class="date"><?=$event['date']?></td>
+          <td class="heure"><?=$event['heure']?></td>
           <td><?=$event['adresse']?><?=$event['zip']?></td>
-          <td><?=$event['infos']?></td>
         </tr>
           <?php } ?>
+    </tbody>
     </table>
     <?php } ?>
-        </div>
+      </div>
+    </div>
 
   <div class="video">
   <iframe class="meig--videos" width="460" height="315" src="https://www.youtube.com/embed/mPexrSD1_Lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>
   <iframe class="meig--videos" width="460" height="315" src="https://www.youtube.com/embed/UOR0oeGQRrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>
   </div>
 
-</div>
-  <div class="header--slider">
-    <button class="prec"><i class="fas fa-arrow-left"></i></button>
+  <div class="photos--meig">
+  <img class="display--photos" src="<?= $wwwUrl ?>/images/meigmata/batteur.jpg" alt="photo">
+  <img class="display--photos" src="<?= $wwwUrl ?>/images/meigmata/marie.jpg" alt="photo">
+  <img class="display--photos" src="<?= $wwwUrl ?>/images/meigmata/pianiste.jpg" alt="photo">
+ </div>
 
-  <div class="your-class">
-  <div><img src="<?= $wwwUrl ?>/images/meigmata/batteur.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/meigmata/marie.jpg" alt="photo"></div>
-  <div><img src="<?= $wwwUrl ?>/images/meigmata/pianiste.jpg" alt="photo"></div>
-</div>
-<button class="next"><i class="fas fa-arrow-right"></i></button>
-</div>
+ <div class="icones--div">
+   <p class="us">Follow us</p>
+   <a href="https://www.facebook.com/search/top/?q=trio%20m%CE%B5%CE%AFgma%CF%84a&epa=SEARCH_BOX" target="_blank"><i class="fab fa-facebook icone1"></i></a>
+   <a href="https://www.youtube.com/results?search_query=trio+meigmata" target="_blank"><i class="fab fa-youtube icone2"></i></a>
+ </div>
 
 </section>

@@ -1,21 +1,12 @@
-<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
-<link rel="stylesheet" href="<?= $wwwUrl ?>/css/parasite.css">
+<link rel="stylesheet" type="text/css" href="<?= $wwwUrl ?>/css/style.css">
+<link rel="stylesheet" type="text/css" href="<?= $wwwUrl ?>/css/parasite.css">
 
-<header>
-  <div class="bar--deux">
-    <div class="nav--list hide">
-      <a class="texte" href="https://www.facebook.com/parasitesanss/" target="_blank">Facebook</a>
-      <a class="texte" href="https://www.youtube.com/channel/UCYPvwTee8RJ1pp0IYibegUQ/videos" target="_blank">Youtube</a>
-    </div>
-
-  </div>
-</header>
 <section>
   <div class="div--parasite">
     <img class="title--img" src="<?= $wwwUrl ?>/images/parasite/para.jpg" alt="titre">
 
     <img class="img-neuf" src="<?= $wwwUrl ?>/images/musique/9.jpg"  alt="parasite sans s">
-    <p class="p--parasite"><span class="underline title--concert">Présentation du groupe :</span>
+    <p class="p--parasite"><span class="underline title--concert underline">Présentation du groupe :</span>
       <br>
       La musique improvisée de PARASITE SANS S trace la cartographie des émotions. Elle se veut lunaire, mais triomphante, entre le bourdon et les plumes, tantôt elle fait peur, tantôt elle rassure, mais jamais elle ne suit un tracé balisé. Sciemment elle cherche les broussailles électriques et les pas qui déraillent. Ses atmosphères chamaniques se perdent avec délice dans des expérimentations qui recyclent les traditions ancestrales sous l'œil de la chimère.
       <br>Naturellement les choses se croisent un pied dans le passé, l’autre dans le présent et le troisième dans l’ultra-futur.</p>
@@ -40,10 +31,17 @@
       </p>
     </div>
 
-<div>
-  <h2 class="title--concert">Concerts à venir</h2>
+<div class="try">
+<div class="sound">
+  <h2 class="title--concert gros">Listen to our music</h2>
+  <iframe class="frame-sound" width="40%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/99957536&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+</div>
+
+<div class="upcoming">
+  <h2 class="title--concert gros">Upcoming dates</h2>
   <?php if (empty($events) == false) { ?>
-<table class="table">
+<table class="table tableau">
+  <thead class="hide">
   <tr class="table">
     <td>Concerts</td>
     <td>Date</td>
@@ -51,23 +49,26 @@
     <td>adresse</td>
     <td>Infos</td>
   </tr>
+  <thead>
+  <tbody>
   <?php foreach($events as $event) { ?>
       <tr class="table">
       <td><?=$event['event']?></td>
-      <td><?=$event['date']?></td>
-      <td><?=$event['heure']?></td>
+      <td class="date"><?=$event['date']?></td>
+      <td class="heure"><?=$event['heure']?></td>
       <td><?=$event['adresse']?><?=$event['zip']?></td>
-      <td><?=$event['infos']?></td>
     </tr>
       <?php } ?>
+  </tbody>
 </table>
 <?php } ?>
     </div>
+  </div>
 
     <div class="header--slider">
       <button class="prec"><i class="fas fa-arrow-left"></i></button>
 
-      <div class="your-class">
+      <div class="your-class responsive">
         <div><img src="<?= $wwwUrl ?>/images/parasite/douze.jpg" alt="photo" width="354" height="246"></div>
         <div><img src="<?= $wwwUrl ?>/images/parasite/quatre.jpg" alt="photo" width="354" height="246"></div>
         <div><img src="<?= $wwwUrl ?>/images/parasite/six.jpg" alt="photo" width="354" height="246"></div>
@@ -86,6 +87,12 @@
         <div><img class="five" src="<?= $wwwUrl ?>/images/parasite/five.jpg" alt="photo"></div>
       </div>
       <button class="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div class="icones--div">
+      <p class="us">Follow us</p>
+      <a href="https://www.facebook.com/parasitesanss/" target="_blank"><i class="fab fa-facebook icone1"></i></a>
+      <a href="https://www.youtube.com/channel/UCYPvwTee8RJ1pp0IYibegUQ/videos" target="_blank"><i class="fab fa-youtube icone2"></i></a>
     </div>
 
   </section>

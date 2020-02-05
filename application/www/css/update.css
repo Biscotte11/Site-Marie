@@ -54,3 +54,13 @@ input, img, textarea {
   outline: none;
   background-color: #28BDA9;
 }
+
+@media (max-width: 375px) {
+	input, img, textarea {
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+		font-size: 12px; 
+}
+}

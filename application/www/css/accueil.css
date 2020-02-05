@@ -1,85 +1,102 @@
 img {
-  width: 465px;
-  height: 400px;
+  width: 565px;
+  height: 440px;
   object-fit: cover;
-  padding: 10px;
+}
+
+.container {
+  width: 90%;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 body {
- background-color: #D6D6D6;
- font-family: 'Roboto Mono', monospace;
+  background-color: #D6D6D6;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 #accueil--div {
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 #user--connect {
   display: inline-block;
 }
 
-.contain {
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
+.nav-bar--deux .under-nav-list {
+	position: absolute;
+  top: 59px;
+  right: -41px;
+  text-align: center;
+  z-index: 9;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #136267;
+  font-size: 22px;
 }
 
-.under-nav-list{
-  font-size: 18px;
-  display: block;
-  color: white;
-  text-decoration: none;
+.div--groupe {
+  position: relative;
+  z-index: 1;
 }
 
 .home--img-cinq {
-padding-top: 10px;
+  position: relative;
+  padding-top: 10px;
 }
 
 .home--img-six {
-object-position: right;
-padding-top: 10px;
-border-radius: 50%;
+  position: relative;
+  object-position: right;
+  padding-top: 10px;
 }
 
 .home--img-sept {
-margin-bottom: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 5px;
 }
 
 .home--img-huit {
+  position: relative;
   object-position: left;
-  width: 550px;
+  padding-top: 5px;
 }
 
 .title--parasite {
-position: absolute;
-width: 292px;
-height: 43px;
-  left: 269px;
-top: 71px;
-color: black;
-font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  width: 300px;
+  height: 43px;
+  left:15px;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  z-index: 12;
 }
 
 .title--pop {
-position: absolute;
-width: 272px;
-height: 43px;
-left: 1101px;
-top: 259px;
-color: white;
-font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  width: 272px;
+  height: 43px;
+  top: 208px;
+  left: 224px;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  z-index: 12;
 }
 
 .title--meigmata {
-font-family: 'Roboto Mono', monospace;
-position: absolute;
-width: 272px;
-height: 43px;
-left: 370px;
-top: 725px;
-color: white;
+  font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  width: 272px;
+  height: 43px;
+  left: 180px;
+  top: 251px;
+  color: white;
+  z-index: 12;
 }
 
 .title--frere {
@@ -87,18 +104,19 @@ color: white;
   position: absolute;
   width: 289px;
   height: 35px;
-  left: 1104px;
-  top: 692px;
+  top: 311px;
+  left: 279px;
   color: white;
   text-align: center;
+  z-index: 12;
 }
 
 .nav-bar a:hover {
-	color: #28BDA9;
+  color: #28BDA9;
 }
 
 .nav-list1 :hover {
-	color: #28BDA9;
+  color: #28BDA9;
 }
 
 .user {
@@ -106,9 +124,133 @@ color: white;
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 
 .fa-home {
   margin-left: 20px;
+}
+
+#cacher{
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .contain {
+    width: 1300px;
+  }
+
+img {
+    width: 636px;
+    height: 455px;
+}
+
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 85px;
+    padding: 7px;
+    width: 11%;
+  }
+
+  .under-nav-list .texte {
+    margin:0;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .contain {
+    width: 1200px;
+  }
+
+  img {
+  width: 564px;
+  height: 446px;
+  /* padding-top: 8px; */
+}
+}
+
+@media  screen and (max-width: 1200px) {
+
+  .contain {
+    width: 768px;
+  }
+
+  img {
+  width: 530px;
+  height: 442px;
+  padding-top: 8px;
+}
+}
+
+@media (max-width: 768px){
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 58px;
+    padding: 7px;
+    width: 14%;
+  }
+}
+
+@media (max-width: 375px){
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 0px;
+    padding: 7px;
+    width: 31%;
+    font-size: 18px;
+  }
+
+  .bar--deux {
+    color: white;
+    font-size: 25px;
+  }
+
+  #nav-bar--deux> a, #user--connect>a {
+    margin: 5px;
+  }
+
+  .fa-home {
+    margin:0;
+    font-size: 27px;
+}
+
+  img {
+    width: 335px;
+    height: 275px;
+    object-fit: cover;
+  }
+
+  .home--img-huit {
+    width: 335px;
+    height: 275px;
+    object-fit: cover;
+  }
+
+  .title--pop {
+    position: absolute;
+    top: 119px;
+    left: 110px;
+    font-size: 27px;
+  }
+
+  .title--parasite {
+    position: absolute;
+    top: -9px;
+    left: 22px;
+    font-size: 27px;
+  }
+
+  .title--meigmata {
+    position: absolute;
+    top: -12px;
+    left: 43px;
+    font-size: 27px;
+  }
+
+  .title--frere {
+    position: absolute;
+    top: 186px;
+    left: 63px;
+    font-size: 27px;
+  }
 }

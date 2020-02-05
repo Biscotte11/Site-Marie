@@ -1,9 +1,16 @@
 img {
-  width: 466px;
-  height: 246px;
+  width: 98%;
+  height: 265Px;
   object-fit: cover;
   object-position: center;
   margin:0;
+}
+
+.logo {
+  width: 326px;
+  height: 121px;
+  object-fit: contain;
+  padding-top: 10px;
 }
 
 .bar--deux .nav--list {
@@ -31,11 +38,12 @@ img {
 }
 
 .title--id {
-  width: 926px;
+  width: 754px;
   height: 250px;
   object-fit: cover;
   float: right;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  padding-top: 10px;
 }
 
 .img--2 {
@@ -45,6 +53,9 @@ img {
   object-position: center;
   clear: left;
   margin:0;
+  position: absolute;
+  top: 1300px;
+  left: 900px;
 }
 
 .title--h1{
@@ -55,19 +66,28 @@ img {
   font-size: 38px;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .header--slider{
   clear: both;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+  position: relative;
+  margin-top: 31px;
 }
 
 .p--pop {
   clear: both;
-  margin-bottom: 40px;
-  font-size: 19px;
-  line-height: 1.4;
+  line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
-  padding-top:30px;
+}
+
+.para--pop{
+  padding: 20px;
+  margin: 70px 0 30px 0;
+  font-size: 18px;
 }
 
 .title--concert {
@@ -76,7 +96,7 @@ img {
 }
 
 .table {
-  border: 2px solid #136267;
+  /* border: 2px solid #136267; */
   border-radius: 12px;
   padding: 15px 2%;
   margin-bottom: 20px;
@@ -92,15 +112,38 @@ img {
 }
 
 .table>td {
-  border: 2px solid #136267;
+  /* border: 2px solid #136267; */
+}
+
+.upcoming{
+  display: inline-block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.date{
+  background-color: #566E6E;
+  color:white;
+}
+
+.heure{
+  background-color: #136267;
+  color:white;
+  box-shadow: 5px 4px 5px #566E6E;
+}
+
+.hide{
+  display: none;
 }
 
 .prec {
   font-size: 22px;
   padding: 2px 15px;
-  left: 124px;
-  top: 889px;
   position: absolute;
+  left: 0;
+  top: 0;
   z-index: 2;
   background-color: lightgrey;
   border: none;
@@ -109,10 +152,227 @@ img {
 .next {
   font-size: 22px;
   padding: 2px 15px;
-  z-index: 2;
-  left: 1498px;
-  top: 1102px;
   position: absolute;
+  right:0;
+  bottom: 0;
+  z-index: 2;
   background-color: lightgrey;
   border: none;
+}
+
+.icones--div{
+  display: inline-flex;
+  flex-direction: row;
+  width:100%;
+  /* background-color: #BA5744; */
+  background-color: #B55344;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.icones--div>a {
+  align-self: center;
+  padding: 10px;
+  margin: 0px 10px;
+}
+
+.icone1{
+  font-size: 27px;
+  color: white;
+}
+
+.us{
+  color: white;
+  font-size: 16px;
+  margin-right: 7px;
+}
+
+@media (max-width: 1440px) {
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 87px;
+    width: 8%;
+  }
+
+  .opa {
+    text-align: center;
+  }
+
+  .under-nav-list .texte {
+    margin:0;
+  }
+
+  .img--2 {
+  width: 312px;
+  }
+
+  .title--id {
+  width: 786px;
+  }
+}
+
+@media (max-width: 1406px) {
+
+  .contain {
+    width: 1024px;
+  }
+
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 68px;
+    width: 10%;
+    padding:9px;
+  }
+
+  .under-nav-list .texte {
+    margin:0;
+}
+
+.bar--deux .nav--list {
+  top: 76px;
+  right: 147px;
+  padding: 4px;
+  width: 10%;
+}
+
+  .div--pop{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo{
+    align-self: center;
+    object-fit: cover;
+    width:50%;
+  }
+
+  .para--pop{
+    padding: 20px;
+    margin: 10px 0 10px 0;
+  }
+
+  .title--id {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  img {
+    width: 98%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 36px;
+    width: 14%;
+    padding: 9px;
+}
+
+.bar--deux .nav--list {
+  top: 76px;
+  right: 117px;
+  padding: 4px;
+  width: 13%;
+}
+
+  .title--id {
+    width: 594px;
+    align-self: center;
+  }
+
+  .p--pop {
+    margin: 0;
+    text-align: center;
+  }
+
+  img {
+    width: 98%;
+  }
+}
+
+@media (max-width: 375px){
+  img {
+    width:100%;
+  }
+
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 0px;
+    width: 31%;
+    padding: 9px;
+    font-size: 18px;
+}
+
+.bar--deux {
+  color: white;
+  font-size: 25px;
+}
+
+#nav-bar--deux> a, #user--connect>a {
+  margin: 5px;
+}
+
+  .logo {
+    object-fit: contain;
+    width: 80%;
+  }
+
+  .title--id {
+    width: 100%;
+  }
+
+  .tableau {
+    border: none;
+  }
+
+  #cellule {
+    border: none;
+  }
+
+  .table {
+    margin:0;
+    padding: 0;
+    width: 102%;
+    margin: 15px 0px;
+    border-radius: 0px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    margin-top: 5px;
+  }
+
+  .table>td{
+    border:none;
+    border-bottom: 1px solid;
+  }
+
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1):before { content: "Concerts :"; }
+  td:nth-of-type(2):before { content: "Date :"; }
+  td:nth-of-type(3):before { content: "Heure :"; }
+  td:nth-of-type(4):before { content: "Adresse :"; }
+  td:nth-of-type(5):before { content: "Infos :"; }
 }

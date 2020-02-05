@@ -4,6 +4,15 @@ $(document).ready(function(){
     slidesToShow: 3,
     slidesToScroll: 3,
     prevArrow: $('.prec'),
-    nextArrow: $('.next')
+    nextArrow: $('.next'),
+    responsive: [
+      {
+        breakpoint: 427,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 });

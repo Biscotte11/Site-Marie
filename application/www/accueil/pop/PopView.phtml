@@ -1,29 +1,39 @@
-<link rel="stylesheet" href="<?= $wwwUrl ?>/css/pop.css">
 <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
-
-<header>
-  <div id="liens" class="bar--deux">
-    <div class="nav--list hide">
-      <a class="texte" href="https://www.facebook.com/parasitesanss/" target="_blank">Facebook</a>
-      <a class="texte" href="https://www.youtube.com/channel/UCYPvwTee8RJ1pp0IYibegUQ/videos" target="_blank">Youtube</a>
-    </div>
-
-  </div>
-</header>
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/pop.css">
 
 <section>
 <div class="div--pop">
-  <h1 class="title--h1">l'ID-POP</h1>
-  <img class="img--2" src="<?= $wwwUrl ?>/images/l'id-pop/5.png" alt="photo">
+  <img class="logo" src="<?= $wwwUrl ?>/images/l'id-pop/black.jpg" alt="logo">
   <img class="title--id" src="<?= $wwwUrl ?>/images/l'id-pop/21_Fotor.png" alt="photo">
+
+  <div class="para--pop">
   <p class="p--pop"><span class="underline title--concert">Présentation du groupe :</span><br>
     <br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    L’Id Pop, un trio incongru issu de trois rencontres fortes. Chansons originales pop-rock avec une touche électro-folk, le groupe
+    voyage à travers des leads enflammés de guitare électrique, la douceur
+    de l’acoustique, des riffs rock, une grande liberté d’improvisation, des
+    mélismes orientalisants, de l’intime à la déflagration d’énergie sauvage.
+    <br>
+    « Lentement des fissures se forment sur des doctrines scellées par le
+    temps »
+    « Sans détournement je préfère un esprit libre aux idées imposées »
+    « On est des souffleurs de vers, de poèmes, de ceux qui se répandent sur
+    ta peau, indélébiles, mais tellement loyaux »</p>
+    <p class="p--pop">
+      <ul>
+        <li>Paroles, musique, arrangements : Id Pop</li>
+        <li>Sea-line : Voix, Boîte à rythme</li>
+        <li>Sergio Barbieri : Guitares</li>
+        <li>Marie Mercier : Clarinette, Clarinette basse</li>
+      </ul>
+  </p>
+  </div>
 
-    <div>
-      <h2 class="title--concert">Concerts à venir</h2>
+    <div class="upcoming">
+      <h2 class="title--concert">Upcoming dates</h2>
       <?php if (empty($events) == false) { ?>
-    <table class="table">
+    <table class="table tableau">
+      <thead class="hide">
       <tr class="table">
         <td>Concerts</td>
         <td>Date</td>
@@ -31,15 +41,17 @@
         <td>adresse</td>
         <td>Infos</td>
       </tr>
+    </thead>
+     <tbody>
       <?php foreach($events as $event) { ?>
           <tr class="table">
           <td><?=$event['event']?></td>
-          <td><?=$event['date']?></td>
-          <td><?=$event['heure']?></td>
+          <td class="date"><?=$event['date']?></td>
+          <td class="heure"><?=$event['heure']?></td>
           <td><?=$event['adresse']?><?=$event['zip']?></td>
-          <td><?=$event['infos']?></td>
         </tr>
           <?php } ?>
+     </tbody>
     </table>
     <?php } ?>
         </div>
@@ -62,6 +74,11 @@
 
 </div>
 <button class="next"><i class="fas fa-arrow-right"></i></button>
+</div>
+
+<div class="icones--div">
+  <p class="us">Follow us</p>
+  <a href="https://www.facebook.com/marie.mercier.5076" target="_blank"><i class="fab fa-facebook icone1"></i></a>
 </div>
 
 </section>

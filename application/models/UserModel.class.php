@@ -150,5 +150,39 @@ class UserModel {
         $database->executeSql($sql, [$id]);
   }
 
+  public function getUserByToken($token)
+  {
+        $database = new Database();
+
+        $sql = 'SELECT Id FROM users WHERE token=?';
+
+        return $database->query($sql, [$token]);
   }
-  ?>
+
+  public function updatePassword($token, $password)
+  {
+      $database = new Database();
+
+      $hash = $this->hashPassword($password);
+
+      $sql = 'UPDATE users SET password=? WHERE token=? LIMIT 1';
+
+      $database->executeSql($sql, [$hash, $token]);
+  }
+
+
+  public function updateToken($id, $token = null)
+  {
+      $database = new Database();
+
+      if (empty($token)) {
+         $token = substr(bin2hex(openssl_random_pseudo_bytes(32)), 0, 22);
+      }
+
+      $sql = 'UPDATE users SET token=? WHERE Id=? LIMIT 1';
+
+      $database->executeSql($sql, [$token, $id]);
+  }
+
+}
+?>

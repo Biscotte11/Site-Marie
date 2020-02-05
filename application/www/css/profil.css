@@ -56,3 +56,35 @@
   padding-left: 3%;
   outline: none;
 }
+
+@media (max-width: 1024px) {
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 50px;
+    width: 13%;
+    border: 1px solid #136267;
+}
+}
+
+@media (max-width: 768px){
+  #nav-bar--deux .under-nav-list {
+      top: 76px;
+      right: 16px;
+      width: 19%;
+      border: 1px solid #136267;
+  }
+}
+
+@media (max-width: 375px){
+  #nav-bar--deux .under-nav-list {
+    top: 76px;
+    right: 0px;
+    width: 37%;
+    border: 1px solid #136267;
+    font-size: 18px;
+}
+
+  .b-form {
+      width: 90%;
+  }
+}

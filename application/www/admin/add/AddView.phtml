@@ -2,11 +2,10 @@
 <link rel="stylesheet" href="<?= $wwwUrl ?>/css/add.css">
 
 <div class="container">
-<h3>Ajoutez un nouveau groupe</h3>
+<h3 class="groupe--add">Ajoutez un nouveau groupe</h3>
 <a class="add" href="<?= $requestUrl ?>/admin"><i class="fas fa-arrow-circle-left"></i></a>
 
 <form class="table table--form" action="<?= $requestUrl ?>/admin/add" method="POST" enctype="multipart/form-data">
-
 
   <input type="text"  name="nomgroupe" placeholder="Nom du groupe">
   <input type="file"  name="photo"

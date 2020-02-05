@@ -3,38 +3,60 @@ body {
 	padding:0;
 }
 
-.container {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 header {
 	background-color: #136267;
+}
+
+.container {
+	width:90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .nav-bar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   padding: 18px;
 	font-size: 30px;
 }
 
-#nav-bar--deux> a, #user--connect>a{
-	margin: 15px;
+.nav-bar--deux{
+	margin-left: auto;
+	padding: 0;
+	height:30px;
+	position: relative;
 }
 
-#nav-bar--deux .under-nav-list {
+.nav-bar--deux .nav--list {
 	position: absolute;
-  top: 75px;
-  right: 87px;
+  top: 59px;
+  right: 16px;
   text-align: center;
   z-index: 9;
   padding: 8px;
   background-color: white;
-  width: 11%;
+  width: 138%;
+  font-size: 22px;
+	 border: 1px solid #136267;
+}
+
+.nav--list .texte {
+	text-decoration: none;
+	color: #136267;
+	font-weight: bold;
+	margin: 20px;
+}
+
+.nav-bar--deux .under-nav-list {
+	position: absolute;
+  top: 59px;
+  right: -41px;
+  text-align: center;
+  z-index: 9;
+  padding: 8px;
+  background-color: white;
   border: 1px solid #136267;
+  font-size: 22px;
 }
 
 .under-nav-list .texte{
@@ -54,6 +76,10 @@ header {
 	font-size: 30px;
 }
 
+.fa-link{
+	padding-right: 30px;
+}
+
 .fa-home {
   color: white;
 }
@@ -69,5 +95,48 @@ header {
 footer {
   background-color: #136267;
   color: white;
-  text-align: center;
+	text-align: center;
+	padding:1px;
+}
+
+.img--footer {
+	width: 185px;
+  height: 130px;
+	object-fit: contain;
+}
+
+.fa-graduation-cap{
+	font-size: 30px;
+}
+
+.faceb {
+	font-size: 30px;
+}
+
+.fa-facebook{
+	color:white;
+}
+
+@media (max-width: 768px) {
+	.img--footer {
+	    width: 149px;
+	    height: 133px;
+	    object-fit: contain;
+		}
+
+	.p--footer{
+		margin:0;
+	}
+
+	p {
+		margin:0;
+	}
+}
+
+@media (max-width: 375px) {
+	.img--footer {
+		  width: 127px;
+		  height: 133px;
+	    object-fit: contain;
+		}
 }

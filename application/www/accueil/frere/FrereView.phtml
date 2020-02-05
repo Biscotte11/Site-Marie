@@ -1,27 +1,17 @@
-<link rel="stylesheet" href="<?= $wwwUrl ?>/css/frere.css">
 <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
-
-<header>
-  <div id="liens" class="bar--deux">
-    <div class="nav--list hide">
-      <a class="texte" href="https://www.facebook.com/Fr%C3%A8res-de-Sac-4tet-196996980822686/" target="_blank">Facebook</a>
-    </div>
-
-  </div>
-</header>
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/frere.css">
 
 <section>
+<h1 class="nom"><span class="nom--span">frere de sac 4tet<span></h1>
 <div class="div--frere">
-  <div class="presentation--un">
-  <img class="un" src="<?= $wwwUrl ?>/images/frere/img4.jpg" alt="photo">
-  <img src="<?= $wwwUrl ?>/images/frere/img2.jpg" alt="photo">
-</div>
-<div class="presentation">
-  <img class="un" src="<?= $wwwUrl ?>/images/frere/img3.jpg" alt="photo">
-  <img class="un" src="<?= $wwwUrl ?>/images/frere/img1.jpg" alt="photo">
+  <img class="img" src="<?= $wwwUrl ?>/images/frere/img4.jpg" alt="photo Marie">
+  <img class="img deux" src="<?= $wwwUrl ?>/images/frere/img2.jpg" alt="photo Jean-loup">
+  <img class="img" src="<?= $wwwUrl ?>/images/frere/img1.jpg" alt="photo femme">
+  <img class="img trois" src="<?= $wwwUrl ?>/images/frere/img3.jpg" alt="photo homme">
  </div>
- <h1 class="nom"><span class="nom--span">frere de sac 4tet<span></h1>
-  <p class="p--pop"><span class="underline title--concert">Présentation du groupe :</span><br>
+
+  <p class="p--pop"><span class="underline title--concert">Présentation du groupe :</span>
+  <br>
   De la Renaissance française à la transe suédoise, les chemins de traverse des musiques traditionnelles européennes, arpentés par un combo familial au son unique. Timbres oubliés et palette d'arrangements entre puissance et impressionnisme, sont les cartes à jouer de ce corps musical aux 4 membres tour à tour solistes, harmonistes et rythmiciens.
   Avec la complicité du public danseur ou auditeur, s'ouvre un nouveau chapitre du livre de cette fratrie, qui marie la connaissance de la tradition aux audaces du néo-trad.
   Frères de Sac 4tet nous emmène ainsi, sur un tapis sonore généreux, à la recherche d'un folk européen d'aujourd'hui.
@@ -58,10 +48,17 @@
       </p>
     </div>
 
-    <div>
-     <h2 class="title--concert">Concerts à venir</h2>
+    <div class="try">
+    <div class="sound">
+      <h2 class="title--concert gros">Listen to our music</h2>
+      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/514556007&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    </div>
+
+    <div class="upcoming">
+     <h2 class="title--concert gros">Upcoming dates</h2>
       <?php if (empty($events) == false) { ?>
-    <table class="table">
+    <table class="table tableau">
+      <thead class="hide">
       <tr class="table">
         <td>Concerts</td>
         <td>Date</td>
@@ -69,22 +66,25 @@
         <td>adresse</td>
         <td>Infos</td>
       </tr>
+      </thead>
+      <tbody>
       <?php foreach($events as $event) { ?>
           <tr  class="table">
           <td><?=$event['event']?></td>
-          <td><?=$event['date']?></td>
-          <td><?=$event['heure']?></td>
+          <td class="date"><?=$event['date']?></td>
+          <td class="heure"><?=$event['heure']?></td>
           <td><?=$event['adresse']?><?=$event['zip']?></td>
-          <td><?=$event['infos']?></td>
         </tr>
           <?php } ?>
+    </tbody>
     </table>
     <?php } ?>
         </div>
+      </div>
 
   <div class="video">
-  <iframe width="460" height="315" src="https://www.youtube.com/embed/LWb8EJllr80" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>
-  <iframe width="460" height="315" src="https://www.youtube.com/embed/lE9OYQO7CfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>
+  <iframe class="meig--videos" width="460" height="315" src="https://www.youtube.com/embed/LWb8EJllr80" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>
+  <iframe  class="meig--videos" width="460" height="315" src="https://www.youtube.com/embed/lE9OYQO7CfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target="_blank"></iframe>
   </div>
 
   <div class="header--slider">
@@ -100,6 +100,12 @@
   <div><img src="<?= $wwwUrl ?>/images/frere/8.jpg" alt="photo"></div>
 </div>
 <button class="next"><i class="fas fa-arrow-right"></i></button>
+</div>
+
+<div class="icones--div">
+  <p class="us">Follow us</p>
+  <a href="https://www.facebook.com/Fr%C3%A8res-de-Sac-4tet-196996980822686/" target="_blank"><i class="fab fa-facebook icone1"></i></a>
+  <a href="https://www.youtube.com/results?search_query=frere+de+sac+4tet" target="_blank"><i class="fab fa-youtube icone2"></i></a>
 </div>
 
 </section>
