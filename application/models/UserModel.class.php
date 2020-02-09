@@ -33,6 +33,13 @@ class UserModel {
       }
     }
 
+    public function getUserByEmail($mail){
+      $database = new Database();
+      $sql = 'SELECT * FROM users WHERE email = ?';
+
+      return $database->queryOne($sql, [$mail]);
+    }
+
 
     private function verifyPassword($password, $hashedPassword)
     {
@@ -156,7 +163,7 @@ class UserModel {
 
         $sql = 'SELECT Id FROM users WHERE token=?';
 
-        return $database->query($sql, [$token]);
+        return $database->queryOne($sql, [$token]);
   }
 
   public function updatePassword($token, $password)
@@ -165,7 +172,7 @@ class UserModel {
 
       $hash = $this->hashPassword($password);
 
-      $sql = 'UPDATE users SET password=? WHERE token=? LIMIT 1';
+      $sql = 'UPDATE users SET password=?, token= null, WHERE token=? LIMIT 1';
 
       $database->executeSql($sql, [$hash, $token]);
   }
@@ -182,6 +189,8 @@ class UserModel {
       $sql = 'UPDATE users SET token=? WHERE Id=? LIMIT 1';
 
       $database->executeSql($sql, [$token, $id]);
+
+      return $token;
   }
 
 }

@@ -30,7 +30,7 @@ class PasswordresetController
         $http->redirectTo('/accueil');
       }
 
-      if ($pwd === $confirm) {
+      if ($password === $confirm) {
         $um = new UserModel();
         $user = $um->getUserByToken($token);
 
@@ -38,7 +38,7 @@ class PasswordresetController
           $http->redirectTo('/accueil');
         }
 
-        $um->updatePassword($user->id, $password);
+      $um->updatePassword($user['Id'], $password);
       }
 
       $http->redirectTo('/user/login');

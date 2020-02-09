@@ -54,9 +54,10 @@
   <?php foreach($events as $event) { ?>
       <tr class="table">
       <td><?=$event['event']?></td>
-      <td class="date"><?=$event['date']?></td>
+      <td class="date"><?=date("d-m-Y",strtotime($event['date']))?></td>
       <td class="heure"><?=$event['heure']?></td>
       <td><?=$event['adresse']?><?=$event['zip']?></td>
+      <td class="heure"><?=$event['infos']?></td>
     </tr>
       <?php } ?>
   </tbody>

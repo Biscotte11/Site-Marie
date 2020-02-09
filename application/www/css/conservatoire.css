@@ -100,6 +100,34 @@ body::after{
   margin-right: 7px;
 }
 
+.upcoming{
+  display: inline-block;
+  width: 80%;
+  text-align: center;
+  clear: both;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.dates{
+  text-align: center;
+}
+
+.date{
+  background-color: #566E6E;
+  color:white;
+}
+
+.heure{
+  background-color: #136267;
+  color:white;
+  box-shadow: 5px 4px 5px #566E6E;
+}
+
+td {
+  padding: 12px; 
+}
+
 footer {
   clear: both;
   display: none;

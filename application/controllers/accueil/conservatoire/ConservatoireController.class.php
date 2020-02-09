@@ -4,7 +4,15 @@ class ConservatoireController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
-      
+      $id= $_GET['id'];
+      $concertModel = new ConcertsModel();
+      $events = $concertModel->groupeConcert($id);
+
+      //var_dump($events);
+
+      return [
+            'events' => $events
+        ];
     }
 
     public function httpPostMethod(Http $http, array $formFields)
