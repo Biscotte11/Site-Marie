@@ -81,12 +81,39 @@ input{
   color: #28BDA9;
 }
 
+.register {
+  text-align: center;
+  margin-bottom: 30px
+}
+
+.button-register {
+  background-color: #28BDA9;
+  display: block;
+  width: 30%;
+  margin: auto;
+  margin-top: 10px;
+  height: 32px;
+  border-radius: 12px;
+  border: none;
+  padding-left: 3%;
+}
+
+.title--register {
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
   #nav-bar--deux .under-nav-list {
     top: 76px;
     right: 50px;
     width: 13%;
     border: 1px solid #136267;
+}
+
+.table td {
+    padding: 6px 5%;
+    font-size: 21px;
+    color: black;
 }
 }
 

@@ -10,6 +10,9 @@ class DeleteController
       $userModel->deleteUser($id);
 
 
+      $concertModel = new ConcertsModel();
+      $concertModel->deleteConcert($id); 
+
        $http->redirectTo('/admin');
     }
 

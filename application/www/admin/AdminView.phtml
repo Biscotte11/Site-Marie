@@ -38,14 +38,53 @@
     <input type="time" name="heure" placeholder="Heure">
     <input type="text" name="adresse" placeholder="Adresse">
     <input type="text" name="zip" placeholder="Code postal">
-    <input type="text" name="infos" placeholder="Informations">
+    <input type="text" name="infos" placeholder="informations">
     <input class="button" type="submit" value="Valider">
   </form>
 </div>
 
- <hr/>
- <h4>Gestion des musiciens</h4>
+<div>
+  <h2 class="title--admin gestion">Gestion du calendrier</h2>
+  <table class="table">
+    <tr>
+      <td>Event</td>
+      <td>Date</td>
+      <td>Heure</td>
+      <td>Adresse</td>
 
+      <td></td>
+    </tr>
+     <?php foreach($allshows as $allshow) { ?>
+        <tr>
+        <td><?=$allshow['event']?></td>
+        <td><?=$allshow['date']?></td>
+        <td><?=$allshow['heure']?></td>
+        <td><?=$allshow['adresse']?></td>
+      
+
+        <td><a class="add" href="<?=$requestUrl ?>/user/delete?id=<?=$allshow['Id']?>"><i class="fas fa-trash-alt"></i></a></td>
+      </tr>
+        <?php } ?>
+  </table>
+</div>
+
+ <hr/>
+ <h2 class="title--register">Gestion des musiciens</h2>
+ <div class="register">
+ 	<h3>Nouveau musicien</h3>
+ 	<form class="b-form" action="<?=$requestUrl?>/admin/register" method="POST">
+        <select class="button" id="nomgroupe" name="nomgroupe">
+          <?php foreach ($groupes as $groupe) { ?>
+            <option value="<?= $groupe['groupeid'] ?>"><?= $groupe['nomgroupe'] ?></option>
+          <?php } ?>
+       </select>
+     <input type="text" name="firstname" placeholder="Prénom">
+ 		<input type="text" name="lastname" placeholder="Nom">
+ 		<input type="text" name="email" placeholder="Email">
+ 		<input type="text" name="password" placeholder="Mot de passe">
+ 		<input class="button-register" type="submit" value="Enregister">
+ 	</form>
+ </div>
  <table class="table">
    <tr>
      <td>Nom</td>

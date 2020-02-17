@@ -13,10 +13,14 @@ class AdminController
      $userModel = new UserModel();
      $musiciens = $userModel->listAllUsers();
 
+     $concertModel= new ConcertsModel();
+     $allshows = $concertModel->allConcerts();
+
      return [
            'groupes' => $groupes,
-           'musiciens'=> $musiciens
-       ];
+           'musiciens'=> $musiciens,
+           'allshows'=> $allshows
+       ]; 
  }
 
 

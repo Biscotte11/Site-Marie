@@ -36,15 +36,6 @@
 
       <div class="nav-bar--deux nav-bar" >
 
-        <!-- <div  id="cacher" class="liens bar--deux">
-          <a><i class="fas fa-link"></i></a>
-
-          <div class="bar--link hide">
-          <a class="texte" href="https://www.facebook.com/parasitesanss/" target="_blank">Facebook</a>
-          <a class="texte" href="https://www.youtube.com/channel/UCYPvwTee8RJ1pp0IYibegUQ/videos" target="_blank">Youtube</a>
-        </div>
-
-        </div> -->
 
         <div id="user--connect" class="bar--deux">
           <a><i class="fas fa-user user"></i></a>
@@ -65,7 +56,6 @@
             <?php } else {?>
               <div id="opa" class="nav--hide position">
                 <a class="texte" href="<?= $requestUrl ?>/user/login">Connexion</a>
-                <a class="texte" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
               </div>
 
             <?php } ?>
@@ -84,13 +74,13 @@
   <!-- Pied de page commun -->
   <footer>
     <div class="first--footer">
-      <p>Contact : marie.mercier@gmail.com</p>
+      <a class="mail" href="mailto:marie.mercier1210@gmail.com">Contactez moi par mail</a>
       <p class="p--footer">Mais aussi professeur <i class="fas fa-graduation-cap prof"></i><br>Conservatoire Populaire de Musique de Geneve </p>
       <div class="imgF--float">
         <a href="<?= $requestUrl ?>/accueil/conservatoire?id=5"><img class="img--footer" src="<?= $wwwUrl ?>/images/musique/Logo.jpg"></a>
       </div>
     </div>
-    <small>copyright Marie Mercier</small>
+    <small>copyright Sandy Galland</small>
   </footer>
 
   <!-- Code principal JavaScript de l'application -->

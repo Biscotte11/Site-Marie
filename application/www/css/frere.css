@@ -108,7 +108,6 @@ img {
 }
 
 .table {
-  /* border: 2px solid #136267; */
   border-radius: 12px;
   padding: 15px 2%;
   margin-bottom: 20px;
@@ -120,11 +119,7 @@ img {
 }
 
 .table >td{
-  padding: 15px;
-}
-
-.table>td {
-  /* border: 2px solid #136267; */
+  padding: 12px;
 }
 
 .try{
@@ -136,7 +131,7 @@ img {
 }
 
 .upcoming{
-  width:52%;
+  width:54%;
 }
 
 .sound{
@@ -214,10 +209,14 @@ img {
   display: inline-flex;
   flex-direction: row;
   width:100%;
-  /* background-color: #6E6E6E; */
   background-color: #A2A2A2;
   justify-content: center;
   margin-bottom: 20px;
+}
+
+.mus{
+  height: 40px;
+  width: 40px;
 }
 
 .icones--div>a {
@@ -237,10 +236,110 @@ img {
   margin-right: 7px;
 }
 
-@media (max-width: 1440px) {
+@media screen and (max-width: 1921px) {
+  .contain {
+    width: 1445px;
+  }
+
+  .img {
+    margin-right: 7px;
+    height: 445px;
+    width: 25%;
+  }
+
+  .nom {
+    font-size: 44px;
+  }
+
+  .p--pop {
+    font-size: 26px;
+  }
+
+  .frere--para {
+    width: 47%;
+    font-size: 24px;
+  }
+
+  .artistes {
+    font-size: 24px;
+  }
+
+  .title--concert{
+    font-size: 30px;
+  }
+
+  img {
+    height: 345px;
+  }
+
+  .us{
+    font-size: 21px;
+  }
+
+  .img--footer {
+    width: 345px;
+    height: 345px;
+  }
+
+  .p--footer{
+    font-size: 26px;
+    margin-bottom: 0px;
+  }
+
+  small {
+    font-size: 100%;
+  }
+
+  .fa-home, .fa-user{
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 1444px) {
 
   .contain{
     width:1200;
+  }
+
+  .upcoming {
+    font-size: 18px;
+  }
+
+  .date, .heure{
+    width: 11%
+  }
+
+  .fa-home, .fa-user {
+    font-size: 30px;
+  }
+
+  .nom {
+    font-size: 40px;
+  }
+
+  .img {
+    height: 425px;
+  }
+
+  .p--pop {
+    font-size: 22px;
+  }
+
+  .title--concert {
+    font-size: 28px;
+  }
+
+  .frere--para {
+    width: 47%;
+    font-size: 22px;
+  }
+
+  .artistes {
+    font-size: 22px;
+  }
+
+  .table >td {
+    padding: 10px;
   }
 
   #nav-bar--deux .under-nav-list {
@@ -270,9 +369,27 @@ img {
   img {
     width: 98%;
   }
+
+  .us {
+    font-size: 18px;
+  }
+
+  .mail {
+    font-size: 18px;
+  }
+
+  .p--footer {
+    font-size: 22px;
+    margin-bottom: 0px;
+  }
+
+  .img--footer {
+    width: 250px;
+    height: 250px;
+  }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1199px){
   .presentation--un {
     margin:0;
     margin-top: 6px;
@@ -320,9 +437,40 @@ img {
 
   @media (max-width: 768px) {
 
-    /* .contain {
-    width: 376px;
-    } */
+    .img {
+      height: 340px;
+    }
+
+    .title--concert {
+      font-size: 22px;
+    }
+
+    .p--pop {
+      font-size: 16px;
+    }
+
+    .frere--para {
+      width: 47%;
+      font-size: 16px;
+    }
+
+    .artistes {
+      font-size: 18px;
+    }
+
+    .try{
+      display: block;
+    }
+
+    .sound, .upcoming{
+      width:100%;
+    }
+
+    .nom {
+      font-size: 33px;
+      text-align: center;
+      margin: 20px;
+    }
 
     #nav-bar--deux .under-nav-list {
       top: 76px;
@@ -340,6 +488,7 @@ img {
 
     .frere--para {
       width: 44%;
+      margin-top: 10px;
     }
 
     .meig--videos {
@@ -347,13 +496,51 @@ img {
       height: 240px;
     }
 
+    .header--slider {
+      height: 250px;
+  }
+
     img {
       width: 98%;
+      height: 250px;
+      object-fit: cover;
+      object-position: top;
+      margin-bottom: 4px;
     }
 
     .title--frere {
       left: 243px;
     }
+
+    .date, .heure {
+      width: 30%;
+    }
+
+    .table >td {
+      padding: 6px;
+    }
+
+    .us {
+      align-self: center;
+    }
+
+    .mail {
+        font-size: 16px;
+    }
+
+    .p--footer {
+      font-size: 20px;
+      margin-bottom: 0px;
+  }
+
+  .img--footer {
+      width: 180px;
+      height: 180px;
+  }
+
+  small {
+      font-size: 77%;
+  }
   }
 
   @media (max-width: 425px){
@@ -431,6 +618,21 @@ img {
       width:100%;
     }
 
+    .nom {
+      font-size: 28px;
+      margin: 12px;
+      font-size: 28px;
+    }
+
+    .title--concert {
+      font-size: 20px;
+    }
+
+    .p--pop {
+      font-size: 16px;
+      padding-top: 15px;
+    }
+
     #nav-bar--deux .under-nav-list {
       top: 76px;
       right: 0px;
@@ -465,11 +667,6 @@ img {
       margin-bottom: 10px;
     }
 
-    .nom {
-      font-size: 30px;
-      margin-top: 28px;
-    }
-
     .p--pop {
       margin:0;
     }
@@ -477,10 +674,53 @@ img {
     .frere--para {
       width: 100%;
       margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .artistes {
+      font-size: 20px;
     }
 
     .title--concert {
       margin-top: 30px;
+    }
+
+    .try {
+      display: block;
+    }
+
+    .sound, .upcoming {
+      width: 100%;
+    }
+
+    .us {
+      align-self: center;
+    }
+
+    .mail {
+      font-size: 16px;
+    }
+
+    .p--footer {
+      font-size: 16px;
+      margin-bottom: 0px;
+    }
+
+    .img--footer {
+      width: 180px;
+      height: 180px;
+    }
+
+    small {
+      font-size: 77%;
+    }
+
+    .table>td{
+      border:none;
+      width:80%;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 22Px;
     }
 
     .tableau {
@@ -513,12 +753,6 @@ img {
       position: relative;
       padding-left: 50%;
       margin-top: 5px;
-    }
-
-    .table>td{
-      border:none;
-      border-bottom: 1px solid;
-      padding: 22Px;
     }
 
     td:before {

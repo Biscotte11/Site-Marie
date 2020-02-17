@@ -22,6 +22,6 @@ class RegisterController
 
 
 
-      $http->redirectTo('/user/login');
+      $http->redirectTo('/admin');
     }
 }

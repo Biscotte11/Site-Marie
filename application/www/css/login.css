@@ -84,6 +84,63 @@ legend{
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1921px) {
+  .contain {
+    width: 1445px;
+  }
+
+  .b-form {
+      width: 21%;
+      font-size: 25px;
+  }
+
+  h3{
+    font-size: 30px;
+  }
+
+  .oubli {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 1444px) {
+  .contain {
+    width: 769px;
+  }
+
+  .b-form {
+    width: 38%;
+    font-size: 22px;
+}
+
+.b-form>input {
+    padding: 8px 10px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    border: none;
+    width: 95%;
+}
+
+.oubli {
+    font-size: 16px;
+}
+
+.mail {
+    text-decoration: underline;
+    color: white;
+    font-size: 16px;
+}
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .forget {
+    font-size: 12px;
+    width: 88%;
+}
+}
+
 @media (max-width: 768px) {
   .b-form {
   width:40%;
@@ -91,7 +148,20 @@ legend{
 }
 
 @media (max-width: 375px) {
-  .b-form {
-  width:70%;
+
+  h3 {
+    font-size: 22px;
   }
+
+  .b-form {
+  width:85%;
+  }
+
+  .forget {
+    width: 65%;
+}
+
+.oubli {
+    font-size: 16px;
+}
 }

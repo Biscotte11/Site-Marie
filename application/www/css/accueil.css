@@ -6,8 +6,6 @@ img {
 
 .container {
   width: 90%;
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 
 body {
@@ -28,7 +26,7 @@ body {
 }
 
 .nav-bar--deux .under-nav-list {
-	position: absolute;
+  position: absolute;
   top: 59px;
   right: -41px;
   text-align: center;
@@ -135,14 +133,134 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1400px) {
-  .contain {
-    width: 1300px;
+.mail {
+  text-decoration: underline;
+  color: white;
+  font-size: 22px;
+}
+
+
+@media screen and (min-width: 1900px) and (max-width: 1921px) {
+
+  /* .contain {
+    width: 1445px;
+  } */
+
+  img {
+    width: 847px;
+    height: 571px;
   }
 
-img {
-    width: 636px;
-    height: 455px;
+  .nav-bar--deux .under-nav-list {
+    top: 64px;
+    right: -96px;
+  }
+
+  .img--footer {
+    width: 345px;
+    height: 345px;
+  }
+
+  .p--footer{
+    font-size: 26px;
+    margin-bottom: 0px;
+  }
+
+  small {
+    font-size: 100%;
+  }
+
+  .title--parasite {
+    width: 446px;
+    height: 43px;
+    left: 13px;
+    top: -24px;
+    font-size: 3em;
+  }
+
+  .title--pop {
+    top: 260px;
+    left: 333px;
+    font-size: 3em;
+  }
+
+  .title--meigmata {
+    width: 379px;
+    height: 43px;
+    left: 272px;
+    top: 343px;
+    font-size: 3em;
+  }
+
+  .title--frere {
+    width: 471px;
+    height: 35px;
+    top: 319px;
+    left: 329px;
+    font-size: 3em;
+  }
+
+  .fa-home, .fa-user{
+    font-size: 44px;
+  }
+}
+
+@media screen and (min-width: 1399px) and (max-width: 1444px) {
+
+  img {
+      width: 632px;
+      height: 466px;
+  }
+}
+
+@media screen and (min-width: 1321px) and (max-width: 1399px) {
+
+  img {
+      width: 595px;
+      height: 466px;
+  }
+
+.title--parasite {
+    left: 13px;
+    top: -9px;
+    font-size: 2em;
+}
+
+.title--pop {
+    top: 216px;
+    left: 239px;
+    font-size: 2em;
+}
+
+.title--meigmata {
+    left: 195px;
+    top: 269px;
+    font-size: 2em;
+}
+
+.title--frere {
+    width: 341px;
+    height: 35px;
+    top: 322px;
+    left: 277px;
+    font-size: 2em;
+}
+
+.mail {
+    font-size: 20px;
+}
+
+.p--footer {
+    font-size: 22px;
+}
+
+.fa-home, .fa-user{
+  font-size: 30px;
+}
+
+.nav-bar--deux .under-nav-list {
+    top: 59px;
+    right: -27px;
 }
 
   #nav-bar--deux .under-nav-list {
@@ -155,34 +273,102 @@ img {
   .under-nav-list .texte {
     margin:0;
   }
+
+  .img--footer {
+    height: 250px;
+    width: 250px;
+}
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (min-width: 1201px) and (max-width: 1320px){
+
+  img {
+    width: 548px;
+    height: 445px;
+}
+
+.title--frere {
+    top: 311px;
+    left: 259px;
+}
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px){
   .contain {
     width: 1200px;
   }
 
   img {
-  width: 564px;
-  height: 446px;
-  /* padding-top: 8px; */
+    width: 455px;
+    height: 442px;
+  }
+
+.title--parasite {
+    left: 13px;
+    top: -9px;
+    font-size: 2em;
+}
+
+.title--pop {
+    top: 209px;
+    left: 179px;
+}
+
+.title--meigmata {
+    left: 127px;
+    top: 242px;
+}
+
+.title--frere {
+    top: 271px;
+    left: 125px;
 }
 }
 
-@media  screen and (max-width: 1200px) {
+@media  screen and (min-width:769px) and (max-width: 1024px) {
 
   .contain {
-    width: 768px;
+    width: 1024px;
   }
 
   img {
-  width: 530px;
-  height: 442px;
-  padding-top: 8px;
-}
+    width: 455px;
+    height: 442px;
+  }
+
+  .title--parasite {
+      left: 13px;
+      top: -9px;
+      font-size: 2em;
+  }
+
+  .title--pop {
+    top: 210px;
+    left: 179px;
+    font-size: 2em;
 }
 
-@media (max-width: 768px){
+  .title--meigmata {
+        left: 126px;
+        top: 247px;
+        font-size: 2em;
+    }
+
+    .title--frere {
+      width: 341px;
+      height: 35px;
+      top: 270px;
+      left: 147px;
+      font-size: 2em;
+  }
+}
+
+@media screen and (min-width:377px) and (max-width: 768px){
+
+  .contain{
+    width:768px;
+  }
+
   #nav-bar--deux .under-nav-list {
     top: 76px;
     right: 58px;
@@ -191,7 +377,17 @@ img {
   }
 }
 
-@media (max-width: 375px){
+@media screen and (min-width:250px) and (max-width: 376px){
+
+  .contain {
+    width: 375px;
+  }
+
+  .nav-bar--deux .under-nav-list {
+    top: 59px;
+    right: -18px;
+}
+
   #nav-bar--deux .under-nav-list {
     top: 76px;
     right: 0px;
@@ -250,7 +446,11 @@ img {
   .title--frere {
     position: absolute;
     top: 186px;
-    left: 63px;
+    left: 0px;
     font-size: 27px;
   }
+
+  .mail {
+    font-size: 16px;
+}
 }

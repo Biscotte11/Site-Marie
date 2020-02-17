@@ -102,7 +102,7 @@ body::after{
 
 .upcoming{
   display: inline-block;
-  width: 80%;
+  width: 99%;
   text-align: center;
   clear: both;
   margin-top: 10px;
@@ -116,16 +116,20 @@ body::after{
 .date{
   background-color: #566E6E;
   color:white;
+  width:11%;
+  border: 1px solid #136267;
 }
 
 .heure{
   background-color: #136267;
   color:white;
   box-shadow: 5px 4px 5px #566E6E;
+  width:11%;
+  border: 1px solid #566E6E;
 }
 
 td {
-  padding: 12px; 
+  padding: 12px;
 }
 
 footer {
@@ -133,44 +137,152 @@ footer {
   display: none;
 }
 
-@media (max-width: 1024px){
-  .img--float{
-    width: 250px;
-    height: 700px;
-    object-fit: cover;
-    padding: 0px;
+@media screen and (min-width:1900px) and (max-width: 1921px) {
+  .contain {
+    width: 1445px;
   }
 
-  .img--logo{
-    height: 149px;
-    object-fit: contain;
-    width: 552px;
-    padding: 0;
-    margin-bottom: 56px;
-  }
-}
-
-@media (max-width: 768px){
-
-  .title--marie {
-      font-size: 35px;
-  }
-
-  .img--float{
-    width: 176px;
-    height: 713px;
+  .img--float {
+    width: 376px;
+    height: 809px;
   }
 
   .img--logo {
-    height: 97px;
-    object-fit: contain;
-    width: 558px;
-    padding: 0;
-    margin-bottom: 25px;
+    height: 261px;
+    width: 1699px;
+    margin-bottom: 96px;
+}
+
+  .title--marie {
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    margin-top: 120px;
+}
+
+  h2 {
+  font-size: 32px;
+}
+
+  h3{
+  font-size: 25px;
+  }
+
+  h4 {
+  font-size: 20px;
+  }
+
+ul {
+  font-size: 23px;
+  margin-top: 0;
+}
+
+.atelier{
+  font-size: 23px;
+}
+
+a {
+  font-size: 22px;
+}
+
+p{
+  font-size: 23px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+  .us{
+ font-size: 21px;
 }
 }
 
-@media (max-width: 375px) {
+@media screen and (min-width:769px) and (max-width: 1444px){
+
+  .upcoming {
+    font-size: 18px;
+  }
+
+  .date, .heure{
+    width: 11%
+  }
+
+  .title--marie {
+    font-size: 34px;
+    color: white;
+    text-align: left;
+    margin-top: 0px;
+}
+
+  .img--float {
+    width: 288px;
+    height: 815px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  ul {
+    font-size: 18px;
+}
+
+.atelier {
+    font-size: 18px;
+}
+
+.img--logo {
+  height: 171px;
+  width: 837px;
+  margin-bottom: 36px;
+}
+
+  .us {
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (min-width:376px) and (max-width: 768px){
+
+  h2{
+    font-size: 22px;
+  }
+
+  .title--marie {
+    font-size: 30px;
+    text-align: left;
+    margin-top: 34px;
+}
+
+  .img--float {
+      width: 233px;
+      height: 815px;
+  }
+
+  .img--logo {
+      height: 97px;
+      object-fit: contain;
+      width: 629px;
+      padding: 0;
+      margin-bottom: 0px;
+  }
+
+  ul {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .icones--div {
+    width: 110%;
+}
+
+.us {
+    font-size: 16px;
+    align-self: center;
+}
+}
+
+@media screen and (min-width:200px) and (max-width: 375px){
 
   h2{
     font-size: 20px;
@@ -213,5 +325,29 @@ footer {
     color: white;
     font-size: 16px;
     padding: 18px;
+}
+
+.sound, .upcoming {
+  width:100%;
+}
+
+.upcoming{
+  font-size: 16px;
+}
+
+.try{
+  display: block;
+}
+
+.table>td{
+  border:none;
+  width:80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding:22px;
+}
+
+table, thead, tbody, th, td, tr {
+    display: block;
 }
 }

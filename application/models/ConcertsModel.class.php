@@ -23,7 +23,24 @@ class ConcertsModel {
 
     $sql = 'SELECT * FROM concerts WHERE groupeid=?';
 
-    return $database->query($sql, [$id]); 
+    return $database->query($sql, [$id]);
+  }
+
+
+  public function allConcerts() {
+    $database = new Database();
+
+    $sql = 'SELECT * FROM concerts';
+
+    return  $database->query($sql, []);
+  }
+
+  public function deleteConcert($id) {
+        $database = new Database();
+
+        $sql = 'DELETE FROM concerts WHERE Id=?';
+
+        $database->executeSql($sql, [$id]);
   }
 }
 
